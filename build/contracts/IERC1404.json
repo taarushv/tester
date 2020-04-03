@@ -1,0 +1,877 @@
+{
+  "contractName": "IERC1404",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "from",
+          "type": "address"
+        },
+        {
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "name": "value",
+          "type": "uint256"
+        }
+      ],
+      "name": "detectTransferRestriction",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "restrictionCode",
+          "type": "uint8"
+        }
+      ],
+      "name": "messageForTransferRestriction",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.8+commit.23d335f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"name\":\"restrictionCode\",\"type\":\"uint8\"}],\"name\":\"messageForTransferRestriction\",\"outputs\":[{\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"from\",\"type\":\"address\"},{\"name\":\"to\",\"type\":\"address\"},{\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"detectTransferRestriction\",\"outputs\":[{\"name\":\"\",\"type\":\"uint8\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{\"detectTransferRestriction(address,address,uint256)\":{\"details\":\"Overwrite with your custom transfer restriction logic\",\"params\":{\"from\":\"Sending address\",\"to\":\"Receiving address\",\"value\":\"Amount of tokens being transferred\"},\"return\":\"Code by which to reference message for rejection reasoning\"},\"messageForTransferRestriction(uint8)\":{\"details\":\"Overwrite with your custom message and restrictionCode handling\",\"params\":{\"restrictionCode\":\"Identifier for looking up a message\"},\"return\":\"Text showing the restriction's reasoning\"}}},\"userdoc\":{\"methods\":{\"detectTransferRestriction(address,address,uint256)\":{\"notice\":\"Detects if a transfer will be reverted and if so returns an appropriate reference code\"},\"messageForTransferRestriction(uint8)\":{\"notice\":\"Returns a human-readable message for a given restriction code\"}}}},\"settings\":{\"compilationTarget\":{\"/Users/JohnDoe/Desktop/erc1404-simulator/presetupERC1404/contracts/1404/IERC1404.sol\":\"IERC1404\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/JohnDoe/Desktop/erc1404-simulator/presetupERC1404/contracts/1404/IERC1404.sol\":{\"keccak256\":\"0x9161f802112edd22fdcf61102d36d97ef0af064bfe8b44443f05ac7d4caacc4f\",\"urls\":[\"bzzr://ab539cb8d8fd42e2deaeca130ea5bf80661a18449ad2e88fc241dfc97cc741b7\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity 0.5.8;\n\ninterface IERC1404 {\n    /// @notice Detects if a transfer will be reverted and if so returns an appropriate reference code\n    /// @param from Sending address\n    /// @param to Receiving address\n    /// @param value Amount of tokens being transferred\n    /// @return Code by which to reference message for rejection reasoning\n    /// @dev Overwrite with your custom transfer restriction logic\n    function detectTransferRestriction (address from, address to, uint256 value) external view returns (uint8);\n\n    /// @notice Returns a human-readable message for a given restriction code\n    /// @param restrictionCode Identifier for looking up a message\n    /// @return Text showing the restriction's reasoning\n    /// @dev Overwrite with your custom message and restrictionCode handling\n    function messageForTransferRestriction (uint8 restrictionCode) external view returns (string memory);\n}\n\ninterface IERC1404getSuccessCode {\n    /// @notice Return the uint256 that represents the SUCCESS_CODE\n    /// @return uint256 SUCCESS_CODE\n    function getSuccessCode () external view returns (uint256);\n}\n\n/**\n * @title IERC1404Success\n * @dev Combines IERC1404 and IERC1404getSuccessCode interfaces, to be implemented by the TransferRestrictions contract\n */\ncontract IERC1404Success is IERC1404getSuccessCode, IERC1404 {\n}",
+  "sourcePath": "/Users/JohnDoe/Desktop/erc1404-simulator/presetupERC1404/contracts/1404/IERC1404.sol",
+  "ast": {
+    "absolutePath": "/Users/JohnDoe/Desktop/erc1404-simulator/presetupERC1404/contracts/1404/IERC1404.sol",
+    "exportedSymbols": {
+      "IERC1404": [
+        20
+      ],
+      "IERC1404Success": [
+        31
+      ],
+      "IERC1404getSuccessCode": [
+        26
+      ]
+    },
+    "id": 32,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".8"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:0"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 20,
+        "linearizedBaseContracts": [
+          20
+        ],
+        "name": "IERC1404",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": "@notice Detects if a transfer will be reverted and if so returns an appropriate reference code\n @param from Sending address\n @param to Receiving address\n @param value Amount of tokens being transferred\n @return Code by which to reference message for rejection reasoning\n @dev Overwrite with your custom transfer restriction logic",
+            "id": 12,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "detectTransferRestriction",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 8,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3,
+                  "name": "from",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 12,
+                  "src": "458:12:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "458:7:0",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5,
+                  "name": "to",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 12,
+                  "src": "472:10:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 4,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "472:7:0",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 7,
+                  "name": "value",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 12,
+                  "src": "484:13:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "484:7:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "457:41:0"
+            },
+            "returnParameters": {
+              "id": 11,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 12,
+                  "src": "522:5:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 9,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "522:5:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "521:7:0"
+            },
+            "scope": 20,
+            "src": "422:107:0",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Returns a human-readable message for a given restriction code\n @param restrictionCode Identifier for looking up a message\n @return Text showing the restriction's reasoning\n @dev Overwrite with your custom message and restrictionCode handling",
+            "id": 19,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "messageForTransferRestriction",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 15,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 14,
+                  "name": "restrictionCode",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 19,
+                  "src": "854:21:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 13,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "854:5:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "853:23:0"
+            },
+            "returnParameters": {
+              "id": 18,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 17,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 19,
+                  "src": "900:13:0",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 16,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "900:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "899:15:0"
+            },
+            "scope": 20,
+            "src": "814:101:0",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 32,
+        "src": "24:893:0"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 26,
+        "linearizedBaseContracts": [
+          26
+        ],
+        "name": "IERC1404getSuccessCode",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": "@notice Return the uint256 that represents the SUCCESS_CODE\n @return uint256 SUCCESS_CODE",
+            "id": 25,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getSuccessCode",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 21,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1087:2:0"
+            },
+            "returnParameters": {
+              "id": 24,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 23,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 25,
+                  "src": "1113:7:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 22,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1113:7:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1112:9:0"
+            },
+            "scope": 26,
+            "src": "1063:59:0",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 32,
+        "src": "919:205:0"
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 27,
+              "name": "IERC1404getSuccessCode",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 26,
+              "src": "1308:22:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_IERC1404getSuccessCode_$26",
+                "typeString": "contract IERC1404getSuccessCode"
+              }
+            },
+            "id": 28,
+            "nodeType": "InheritanceSpecifier",
+            "src": "1308:22:0"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 29,
+              "name": "IERC1404",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 20,
+              "src": "1332:8:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_IERC1404_$20",
+                "typeString": "contract IERC1404"
+              }
+            },
+            "id": 30,
+            "nodeType": "InheritanceSpecifier",
+            "src": "1332:8:0"
+          }
+        ],
+        "contractDependencies": [
+          20,
+          26
+        ],
+        "contractKind": "contract",
+        "documentation": "@title IERC1404Success\n@dev Combines IERC1404 and IERC1404getSuccessCode interfaces, to be implemented by the TransferRestrictions contract",
+        "fullyImplemented": false,
+        "id": 31,
+        "linearizedBaseContracts": [
+          31,
+          20,
+          26
+        ],
+        "name": "IERC1404Success",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 32,
+        "src": "1280:64:0"
+      }
+    ],
+    "src": "0:1344:0"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/JohnDoe/Desktop/erc1404-simulator/presetupERC1404/contracts/1404/IERC1404.sol",
+    "exportedSymbols": {
+      "IERC1404": [
+        20
+      ],
+      "IERC1404Success": [
+        31
+      ],
+      "IERC1404getSuccessCode": [
+        26
+      ]
+    },
+    "id": 32,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".8"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:0"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 20,
+        "linearizedBaseContracts": [
+          20
+        ],
+        "name": "IERC1404",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": "@notice Detects if a transfer will be reverted and if so returns an appropriate reference code\n @param from Sending address\n @param to Receiving address\n @param value Amount of tokens being transferred\n @return Code by which to reference message for rejection reasoning\n @dev Overwrite with your custom transfer restriction logic",
+            "id": 12,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "detectTransferRestriction",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 8,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3,
+                  "name": "from",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 12,
+                  "src": "458:12:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "458:7:0",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5,
+                  "name": "to",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 12,
+                  "src": "472:10:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 4,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "472:7:0",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 7,
+                  "name": "value",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 12,
+                  "src": "484:13:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "484:7:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "457:41:0"
+            },
+            "returnParameters": {
+              "id": 11,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 12,
+                  "src": "522:5:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 9,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "522:5:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "521:7:0"
+            },
+            "scope": 20,
+            "src": "422:107:0",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Returns a human-readable message for a given restriction code\n @param restrictionCode Identifier for looking up a message\n @return Text showing the restriction's reasoning\n @dev Overwrite with your custom message and restrictionCode handling",
+            "id": 19,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "messageForTransferRestriction",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 15,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 14,
+                  "name": "restrictionCode",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 19,
+                  "src": "854:21:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 13,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "854:5:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "853:23:0"
+            },
+            "returnParameters": {
+              "id": 18,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 17,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 19,
+                  "src": "900:13:0",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 16,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "900:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "899:15:0"
+            },
+            "scope": 20,
+            "src": "814:101:0",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 32,
+        "src": "24:893:0"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 26,
+        "linearizedBaseContracts": [
+          26
+        ],
+        "name": "IERC1404getSuccessCode",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": "@notice Return the uint256 that represents the SUCCESS_CODE\n @return uint256 SUCCESS_CODE",
+            "id": 25,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getSuccessCode",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 21,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1087:2:0"
+            },
+            "returnParameters": {
+              "id": 24,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 23,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 25,
+                  "src": "1113:7:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 22,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1113:7:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1112:9:0"
+            },
+            "scope": 26,
+            "src": "1063:59:0",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 32,
+        "src": "919:205:0"
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 27,
+              "name": "IERC1404getSuccessCode",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 26,
+              "src": "1308:22:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_IERC1404getSuccessCode_$26",
+                "typeString": "contract IERC1404getSuccessCode"
+              }
+            },
+            "id": 28,
+            "nodeType": "InheritanceSpecifier",
+            "src": "1308:22:0"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 29,
+              "name": "IERC1404",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 20,
+              "src": "1332:8:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_IERC1404_$20",
+                "typeString": "contract IERC1404"
+              }
+            },
+            "id": 30,
+            "nodeType": "InheritanceSpecifier",
+            "src": "1332:8:0"
+          }
+        ],
+        "contractDependencies": [
+          20,
+          26
+        ],
+        "contractKind": "contract",
+        "documentation": "@title IERC1404Success\n@dev Combines IERC1404 and IERC1404getSuccessCode interfaces, to be implemented by the TransferRestrictions contract",
+        "fullyImplemented": false,
+        "id": 31,
+        "linearizedBaseContracts": [
+          31,
+          20,
+          26
+        ],
+        "name": "IERC1404Success",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 32,
+        "src": "1280:64:0"
+      }
+    ],
+    "src": "0:1344:0"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.8+commit.23d335f2.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.20",
+  "updatedAt": "2020-03-03T12:32:02.186Z",
+  "devdoc": {
+    "methods": {
+      "detectTransferRestriction(address,address,uint256)": {
+        "details": "Overwrite with your custom transfer restriction logic",
+        "params": {
+          "from": "Sending address",
+          "to": "Receiving address",
+          "value": "Amount of tokens being transferred"
+        },
+        "return": "Code by which to reference message for rejection reasoning"
+      },
+      "messageForTransferRestriction(uint8)": {
+        "details": "Overwrite with your custom message and restrictionCode handling",
+        "params": {
+          "restrictionCode": "Identifier for looking up a message"
+        },
+        "return": "Text showing the restriction's reasoning"
+      }
+    }
+  },
+  "userdoc": {
+    "methods": {
+      "detectTransferRestriction(address,address,uint256)": {
+        "notice": "Detects if a transfer will be reverted and if so returns an appropriate reference code"
+      },
+      "messageForTransferRestriction(uint8)": {
+        "notice": "Returns a human-readable message for a given restriction code"
+      }
+    }
+  }
+}

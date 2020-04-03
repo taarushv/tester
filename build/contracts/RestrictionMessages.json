@@ -1,0 +1,1005 @@
+{
+  "contractName": "RestrictionMessages",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "SUCCESS_CODE",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "FAILURE_TIMELOCK_MESSAGE",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "FAILURE_NON_WHITELIST",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "FAILURE_TIMELOCK",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "FAILURE_CONTRACT_PAUSED_MESSAGE",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "FAILURE_CONTRACT_PAUSED",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "UNKNOWN_ERROR",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "FAILURE_NON_WHITELIST_MESSAGE",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "SUCCESS_MESSAGE",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.8+commit.23d335f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"SUCCESS_CODE\",\"outputs\":[{\"name\":\"\",\"type\":\"uint8\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"FAILURE_TIMELOCK_MESSAGE\",\"outputs\":[{\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"FAILURE_NON_WHITELIST\",\"outputs\":[{\"name\":\"\",\"type\":\"uint8\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"FAILURE_TIMELOCK\",\"outputs\":[{\"name\":\"\",\"type\":\"uint8\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"FAILURE_CONTRACT_PAUSED_MESSAGE\",\"outputs\":[{\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"FAILURE_CONTRACT_PAUSED\",\"outputs\":[{\"name\":\"\",\"type\":\"uint8\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"UNKNOWN_ERROR\",\"outputs\":[{\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"FAILURE_NON_WHITELIST_MESSAGE\",\"outputs\":[{\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"SUCCESS_MESSAGE\",\"outputs\":[{\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/JohnDoe/Desktop/erc1404-simulator/presetupERC1404/contracts/restrictions/RestrictionMessages.sol\":\"RestrictionMessages\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/JohnDoe/Desktop/erc1404-simulator/presetupERC1404/contracts/restrictions/RestrictionMessages.sol\":{\"keccak256\":\"0x5bfa80efb83648d2d7d8f20ff9544ba1fea48e6d54c4ff1dbd934b3d4e482645\",\"urls\":[\"bzzr://03181ff09f19dbb6deec0cdcb57a3a69fa499d87041b8c1095cb4df8da5aacb4\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5061056b806100206000396000f3fe608060405234801561001057600080fd5b50600436106100935760003560e01c8063777eb99f11610066578063777eb99f1461018757806386a299fb1461020a57806397af67441461022e578063c8934462146102b1578063e7984d171461033457610093565b80630e969a0514610098578063191035ab146100bc5780631fb45ec01461013f5780632ddabee814610163575b600080fd5b6100a06103b7565b604051808260ff1660ff16815260200191505060405180910390f35b6100c46103bc565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156101045780820151818401526020810190506100e9565b50505050905090810190601f1680156101315780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b6101476103d8565b604051808260ff1660ff16815260200191505060405180910390f35b61016b6103dd565b604051808260ff1660ff16815260200191505060405180910390f35b61018f6103e2565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156101cf5780820151818401526020810190506101b4565b50505050905090810190601f1680156101fc5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b6102126103fe565b604051808260ff1660ff16815260200191505060405180910390f35b610236610403565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561027657808201518184015260208101905061025b565b50505050905090810190601f1680156102a35780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b6102b961043c565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156102f95780820151818401526020810190506102de565b50505050905090810190601f1680156103265780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b61033c610458565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561037c578082015181840152602081019050610361565b50505050905090810190601f1680156103a95780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b600081565b60405180606001604052806035815260200161050b6035913981565b600181565b600281565b6040518060600160405280603d8152602001610492603d913981565b600381565b6040518060400160405280601281526020017f556e6b6e6f776e204572726f7220436f6465000000000000000000000000000081525081565b6040518060600160405280603c81526020016104cf603c913981565b6040518060400160405280600781526020017f53554343455353000000000000000000000000000000000000000000000000008152508156fe546865207472616e736665722077617320726573747269637465642064756520746f2074686520636f6e7472616374206265696e67207061757365642e546865207472616e736665722077617320726573747269637465642064756520746f207768697465206c69737420636f6e66696775726174696f6e2e546865207472616e736665722077617320726573747269637465642064756520746f2074696d656c6f636b656420746f6b656e732ea165627a7a72305820f683f2ffd4aec635d88b617996a20f08c16a3dad77895faccb938a1e39cd76da0029",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100935760003560e01c8063777eb99f11610066578063777eb99f1461018757806386a299fb1461020a57806397af67441461022e578063c8934462146102b1578063e7984d171461033457610093565b80630e969a0514610098578063191035ab146100bc5780631fb45ec01461013f5780632ddabee814610163575b600080fd5b6100a06103b7565b604051808260ff1660ff16815260200191505060405180910390f35b6100c46103bc565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156101045780820151818401526020810190506100e9565b50505050905090810190601f1680156101315780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b6101476103d8565b604051808260ff1660ff16815260200191505060405180910390f35b61016b6103dd565b604051808260ff1660ff16815260200191505060405180910390f35b61018f6103e2565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156101cf5780820151818401526020810190506101b4565b50505050905090810190601f1680156101fc5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b6102126103fe565b604051808260ff1660ff16815260200191505060405180910390f35b610236610403565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561027657808201518184015260208101905061025b565b50505050905090810190601f1680156102a35780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b6102b961043c565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156102f95780820151818401526020810190506102de565b50505050905090810190601f1680156103265780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b61033c610458565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561037c578082015181840152602081019050610361565b50505050905090810190601f1680156103a95780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b600081565b60405180606001604052806035815260200161050b6035913981565b600181565b600281565b6040518060600160405280603d8152602001610492603d913981565b600381565b6040518060400160405280601281526020017f556e6b6e6f776e204572726f7220436f6465000000000000000000000000000081525081565b6040518060600160405280603c81526020016104cf603c913981565b6040518060400160405280600781526020017f53554343455353000000000000000000000000000000000000000000000000008152508156fe546865207472616e736665722077617320726573747269637465642064756520746f2074686520636f6e7472616374206265696e67207061757365642e546865207472616e736665722077617320726573747269637465642064756520746f207768697465206c69737420636f6e66696775726174696f6e2e546865207472616e736665722077617320726573747269637465642064756520746f2074696d656c6f636b656420746f6b656e732ea165627a7a72305820f683f2ffd4aec635d88b617996a20f08c16a3dad77895faccb938a1e39cd76da0029",
+  "sourceMap": "24:754:8:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;24:754:8;;;;;;;",
+  "deployedSourceMap": "24:754:8:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;24:754:8;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;99:38;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;479:105;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;479:105:8;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;143:47;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;196:42;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;590:120;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;590:120:8;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;244:49;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;716:59;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;716:59:8;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;356:117;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;356:117:8;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;300:50;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;300:50:8;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;99:38;136:1;99:38;:::o;479:105::-;;;;;;;;;;;;;;;;;;;:::o;143:47::-;189:1;143:47;:::o;196:42::-;237:1;196:42;:::o;590:120::-;;;;;;;;;;;;;;;;;;;:::o;244:49::-;292:1;244:49;:::o;716:59::-;;;;;;;;;;;;;;;;;;;:::o;356:117::-;;;;;;;;;;;;;;;;;;;:::o;300:50::-;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity 0.5.8;\n\ncontract RestrictionMessages {\n    // ERC1404 Error codes and messages\n    uint8 public constant SUCCESS_CODE = 0;\n    uint8 public constant FAILURE_NON_WHITELIST = 1;\n    uint8 public constant FAILURE_TIMELOCK = 2;\n    uint8 public constant FAILURE_CONTRACT_PAUSED = 3;\n\n    string public constant SUCCESS_MESSAGE = \"SUCCESS\";\n    string public constant FAILURE_NON_WHITELIST_MESSAGE = \"The transfer was restricted due to white list configuration.\";\n    string public constant FAILURE_TIMELOCK_MESSAGE = \"The transfer was restricted due to timelocked tokens.\";\n    string public constant FAILURE_CONTRACT_PAUSED_MESSAGE = \"The transfer was restricted due to the contract being paused.\";\n    string public constant UNKNOWN_ERROR = \"Unknown Error Code\";\n}",
+  "sourcePath": "/Users/JohnDoe/Desktop/erc1404-simulator/presetupERC1404/contracts/restrictions/RestrictionMessages.sol",
+  "ast": {
+    "absolutePath": "/Users/JohnDoe/Desktop/erc1404-simulator/presetupERC1404/contracts/restrictions/RestrictionMessages.sol",
+    "exportedSymbols": {
+      "RestrictionMessages": [
+        849
+      ]
+    },
+    "id": 850,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 821,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".8"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:8"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 849,
+        "linearizedBaseContracts": [
+          849
+        ],
+        "name": "RestrictionMessages",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": true,
+            "id": 824,
+            "name": "SUCCESS_CODE",
+            "nodeType": "VariableDeclaration",
+            "scope": 849,
+            "src": "99:38:8",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint8",
+              "typeString": "uint8"
+            },
+            "typeName": {
+              "id": 822,
+              "name": "uint8",
+              "nodeType": "ElementaryTypeName",
+              "src": "99:5:8",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint8",
+                "typeString": "uint8"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "30",
+              "id": 823,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "136:1:8",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_0_by_1",
+                "typeString": "int_const 0"
+              },
+              "value": "0"
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": true,
+            "id": 827,
+            "name": "FAILURE_NON_WHITELIST",
+            "nodeType": "VariableDeclaration",
+            "scope": 849,
+            "src": "143:47:8",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint8",
+              "typeString": "uint8"
+            },
+            "typeName": {
+              "id": 825,
+              "name": "uint8",
+              "nodeType": "ElementaryTypeName",
+              "src": "143:5:8",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint8",
+                "typeString": "uint8"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "31",
+              "id": 826,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "189:1:8",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_1_by_1",
+                "typeString": "int_const 1"
+              },
+              "value": "1"
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": true,
+            "id": 830,
+            "name": "FAILURE_TIMELOCK",
+            "nodeType": "VariableDeclaration",
+            "scope": 849,
+            "src": "196:42:8",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint8",
+              "typeString": "uint8"
+            },
+            "typeName": {
+              "id": 828,
+              "name": "uint8",
+              "nodeType": "ElementaryTypeName",
+              "src": "196:5:8",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint8",
+                "typeString": "uint8"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "32",
+              "id": 829,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "237:1:8",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_2_by_1",
+                "typeString": "int_const 2"
+              },
+              "value": "2"
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": true,
+            "id": 833,
+            "name": "FAILURE_CONTRACT_PAUSED",
+            "nodeType": "VariableDeclaration",
+            "scope": 849,
+            "src": "244:49:8",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint8",
+              "typeString": "uint8"
+            },
+            "typeName": {
+              "id": 831,
+              "name": "uint8",
+              "nodeType": "ElementaryTypeName",
+              "src": "244:5:8",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint8",
+                "typeString": "uint8"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "33",
+              "id": 832,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "292:1:8",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_3_by_1",
+                "typeString": "int_const 3"
+              },
+              "value": "3"
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": true,
+            "id": 836,
+            "name": "SUCCESS_MESSAGE",
+            "nodeType": "VariableDeclaration",
+            "scope": 849,
+            "src": "300:50:8",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_string_memory",
+              "typeString": "string"
+            },
+            "typeName": {
+              "id": 834,
+              "name": "string",
+              "nodeType": "ElementaryTypeName",
+              "src": "300:6:8",
+              "typeDescriptions": {
+                "typeIdentifier": "t_string_storage_ptr",
+                "typeString": "string"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "53554343455353",
+              "id": 835,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "string",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "341:9:8",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_stringliteral_39bf027dd97f3bae0cf8cfb909695ec63313a9bd61ad52fc7f52cf565b141da8",
+                "typeString": "literal_string \"SUCCESS\""
+              },
+              "value": "SUCCESS"
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": true,
+            "id": 839,
+            "name": "FAILURE_NON_WHITELIST_MESSAGE",
+            "nodeType": "VariableDeclaration",
+            "scope": 849,
+            "src": "356:117:8",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_string_memory",
+              "typeString": "string"
+            },
+            "typeName": {
+              "id": 837,
+              "name": "string",
+              "nodeType": "ElementaryTypeName",
+              "src": "356:6:8",
+              "typeDescriptions": {
+                "typeIdentifier": "t_string_storage_ptr",
+                "typeString": "string"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "546865207472616e736665722077617320726573747269637465642064756520746f207768697465206c69737420636f6e66696775726174696f6e2e",
+              "id": 838,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "string",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "411:62:8",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_stringliteral_e2c08a66f2b86feb88c976c9f1fd6dfebdf34e61c54a5cf461a34d6ed427b2fc",
+                "typeString": "literal_string \"The transfer was restricted due to white list configuration.\""
+              },
+              "value": "The transfer was restricted due to white list configuration."
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": true,
+            "id": 842,
+            "name": "FAILURE_TIMELOCK_MESSAGE",
+            "nodeType": "VariableDeclaration",
+            "scope": 849,
+            "src": "479:105:8",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_string_memory",
+              "typeString": "string"
+            },
+            "typeName": {
+              "id": 840,
+              "name": "string",
+              "nodeType": "ElementaryTypeName",
+              "src": "479:6:8",
+              "typeDescriptions": {
+                "typeIdentifier": "t_string_storage_ptr",
+                "typeString": "string"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "546865207472616e736665722077617320726573747269637465642064756520746f2074696d656c6f636b656420746f6b656e732e",
+              "id": 841,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "string",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "529:55:8",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_stringliteral_edf29e73f74202bbfbfa188fafb8dcadab0c5de148a5a5e9bf3976faecfa39da",
+                "typeString": "literal_string \"The transfer was restricted due to timelocked tokens.\""
+              },
+              "value": "The transfer was restricted due to timelocked tokens."
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": true,
+            "id": 845,
+            "name": "FAILURE_CONTRACT_PAUSED_MESSAGE",
+            "nodeType": "VariableDeclaration",
+            "scope": 849,
+            "src": "590:120:8",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_string_memory",
+              "typeString": "string"
+            },
+            "typeName": {
+              "id": 843,
+              "name": "string",
+              "nodeType": "ElementaryTypeName",
+              "src": "590:6:8",
+              "typeDescriptions": {
+                "typeIdentifier": "t_string_storage_ptr",
+                "typeString": "string"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "546865207472616e736665722077617320726573747269637465642064756520746f2074686520636f6e7472616374206265696e67207061757365642e",
+              "id": 844,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "string",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "647:63:8",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_stringliteral_ad9af571a3b442df832ef21fd7c443d0876ede9535ce3c723edddbbdbeaba383",
+                "typeString": "literal_string \"The transfer was restricted due to the contract being paused.\""
+              },
+              "value": "The transfer was restricted due to the contract being paused."
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": true,
+            "id": 848,
+            "name": "UNKNOWN_ERROR",
+            "nodeType": "VariableDeclaration",
+            "scope": 849,
+            "src": "716:59:8",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_string_memory",
+              "typeString": "string"
+            },
+            "typeName": {
+              "id": 846,
+              "name": "string",
+              "nodeType": "ElementaryTypeName",
+              "src": "716:6:8",
+              "typeDescriptions": {
+                "typeIdentifier": "t_string_storage_ptr",
+                "typeString": "string"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "556e6b6e6f776e204572726f7220436f6465",
+              "id": 847,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "string",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "755:20:8",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_stringliteral_eff12b0856ae7501c8b50262ed26026205f1ee274bd4090cd444e8ef0358a146",
+                "typeString": "literal_string \"Unknown Error Code\""
+              },
+              "value": "Unknown Error Code"
+            },
+            "visibility": "public"
+          }
+        ],
+        "scope": 850,
+        "src": "24:754:8"
+      }
+    ],
+    "src": "0:778:8"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/JohnDoe/Desktop/erc1404-simulator/presetupERC1404/contracts/restrictions/RestrictionMessages.sol",
+    "exportedSymbols": {
+      "RestrictionMessages": [
+        849
+      ]
+    },
+    "id": 850,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 821,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".8"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:8"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 849,
+        "linearizedBaseContracts": [
+          849
+        ],
+        "name": "RestrictionMessages",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": true,
+            "id": 824,
+            "name": "SUCCESS_CODE",
+            "nodeType": "VariableDeclaration",
+            "scope": 849,
+            "src": "99:38:8",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint8",
+              "typeString": "uint8"
+            },
+            "typeName": {
+              "id": 822,
+              "name": "uint8",
+              "nodeType": "ElementaryTypeName",
+              "src": "99:5:8",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint8",
+                "typeString": "uint8"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "30",
+              "id": 823,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "136:1:8",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_0_by_1",
+                "typeString": "int_const 0"
+              },
+              "value": "0"
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": true,
+            "id": 827,
+            "name": "FAILURE_NON_WHITELIST",
+            "nodeType": "VariableDeclaration",
+            "scope": 849,
+            "src": "143:47:8",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint8",
+              "typeString": "uint8"
+            },
+            "typeName": {
+              "id": 825,
+              "name": "uint8",
+              "nodeType": "ElementaryTypeName",
+              "src": "143:5:8",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint8",
+                "typeString": "uint8"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "31",
+              "id": 826,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "189:1:8",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_1_by_1",
+                "typeString": "int_const 1"
+              },
+              "value": "1"
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": true,
+            "id": 830,
+            "name": "FAILURE_TIMELOCK",
+            "nodeType": "VariableDeclaration",
+            "scope": 849,
+            "src": "196:42:8",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint8",
+              "typeString": "uint8"
+            },
+            "typeName": {
+              "id": 828,
+              "name": "uint8",
+              "nodeType": "ElementaryTypeName",
+              "src": "196:5:8",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint8",
+                "typeString": "uint8"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "32",
+              "id": 829,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "237:1:8",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_2_by_1",
+                "typeString": "int_const 2"
+              },
+              "value": "2"
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": true,
+            "id": 833,
+            "name": "FAILURE_CONTRACT_PAUSED",
+            "nodeType": "VariableDeclaration",
+            "scope": 849,
+            "src": "244:49:8",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint8",
+              "typeString": "uint8"
+            },
+            "typeName": {
+              "id": 831,
+              "name": "uint8",
+              "nodeType": "ElementaryTypeName",
+              "src": "244:5:8",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint8",
+                "typeString": "uint8"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "33",
+              "id": 832,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "292:1:8",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_3_by_1",
+                "typeString": "int_const 3"
+              },
+              "value": "3"
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": true,
+            "id": 836,
+            "name": "SUCCESS_MESSAGE",
+            "nodeType": "VariableDeclaration",
+            "scope": 849,
+            "src": "300:50:8",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_string_memory",
+              "typeString": "string"
+            },
+            "typeName": {
+              "id": 834,
+              "name": "string",
+              "nodeType": "ElementaryTypeName",
+              "src": "300:6:8",
+              "typeDescriptions": {
+                "typeIdentifier": "t_string_storage_ptr",
+                "typeString": "string"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "53554343455353",
+              "id": 835,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "string",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "341:9:8",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_stringliteral_39bf027dd97f3bae0cf8cfb909695ec63313a9bd61ad52fc7f52cf565b141da8",
+                "typeString": "literal_string \"SUCCESS\""
+              },
+              "value": "SUCCESS"
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": true,
+            "id": 839,
+            "name": "FAILURE_NON_WHITELIST_MESSAGE",
+            "nodeType": "VariableDeclaration",
+            "scope": 849,
+            "src": "356:117:8",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_string_memory",
+              "typeString": "string"
+            },
+            "typeName": {
+              "id": 837,
+              "name": "string",
+              "nodeType": "ElementaryTypeName",
+              "src": "356:6:8",
+              "typeDescriptions": {
+                "typeIdentifier": "t_string_storage_ptr",
+                "typeString": "string"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "546865207472616e736665722077617320726573747269637465642064756520746f207768697465206c69737420636f6e66696775726174696f6e2e",
+              "id": 838,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "string",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "411:62:8",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_stringliteral_e2c08a66f2b86feb88c976c9f1fd6dfebdf34e61c54a5cf461a34d6ed427b2fc",
+                "typeString": "literal_string \"The transfer was restricted due to white list configuration.\""
+              },
+              "value": "The transfer was restricted due to white list configuration."
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": true,
+            "id": 842,
+            "name": "FAILURE_TIMELOCK_MESSAGE",
+            "nodeType": "VariableDeclaration",
+            "scope": 849,
+            "src": "479:105:8",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_string_memory",
+              "typeString": "string"
+            },
+            "typeName": {
+              "id": 840,
+              "name": "string",
+              "nodeType": "ElementaryTypeName",
+              "src": "479:6:8",
+              "typeDescriptions": {
+                "typeIdentifier": "t_string_storage_ptr",
+                "typeString": "string"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "546865207472616e736665722077617320726573747269637465642064756520746f2074696d656c6f636b656420746f6b656e732e",
+              "id": 841,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "string",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "529:55:8",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_stringliteral_edf29e73f74202bbfbfa188fafb8dcadab0c5de148a5a5e9bf3976faecfa39da",
+                "typeString": "literal_string \"The transfer was restricted due to timelocked tokens.\""
+              },
+              "value": "The transfer was restricted due to timelocked tokens."
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": true,
+            "id": 845,
+            "name": "FAILURE_CONTRACT_PAUSED_MESSAGE",
+            "nodeType": "VariableDeclaration",
+            "scope": 849,
+            "src": "590:120:8",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_string_memory",
+              "typeString": "string"
+            },
+            "typeName": {
+              "id": 843,
+              "name": "string",
+              "nodeType": "ElementaryTypeName",
+              "src": "590:6:8",
+              "typeDescriptions": {
+                "typeIdentifier": "t_string_storage_ptr",
+                "typeString": "string"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "546865207472616e736665722077617320726573747269637465642064756520746f2074686520636f6e7472616374206265696e67207061757365642e",
+              "id": 844,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "string",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "647:63:8",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_stringliteral_ad9af571a3b442df832ef21fd7c443d0876ede9535ce3c723edddbbdbeaba383",
+                "typeString": "literal_string \"The transfer was restricted due to the contract being paused.\""
+              },
+              "value": "The transfer was restricted due to the contract being paused."
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": true,
+            "id": 848,
+            "name": "UNKNOWN_ERROR",
+            "nodeType": "VariableDeclaration",
+            "scope": 849,
+            "src": "716:59:8",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_string_memory",
+              "typeString": "string"
+            },
+            "typeName": {
+              "id": 846,
+              "name": "string",
+              "nodeType": "ElementaryTypeName",
+              "src": "716:6:8",
+              "typeDescriptions": {
+                "typeIdentifier": "t_string_storage_ptr",
+                "typeString": "string"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "556e6b6e6f776e204572726f7220436f6465",
+              "id": 847,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "string",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "755:20:8",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_stringliteral_eff12b0856ae7501c8b50262ed26026205f1ee274bd4090cd444e8ef0358a146",
+                "typeString": "literal_string \"Unknown Error Code\""
+              },
+              "value": "Unknown Error Code"
+            },
+            "visibility": "public"
+          }
+        ],
+        "scope": 850,
+        "src": "24:754:8"
+      }
+    ],
+    "src": "0:778:8"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.8+commit.23d335f2.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.20",
+  "updatedAt": "2020-03-03T12:32:02.200Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

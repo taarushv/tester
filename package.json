@@ -1,0 +1,41 @@
+{
+  "name": "inx_token",
+  "version": "1.0.0",
+  "description": "",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "compile": "truffle compile",
+    "console": "truffle console",
+    "test": "npm run compile && scripts/test.sh",
+    "coverage": "solidity-coverage",
+    "solcover": "truffle run coverage --solcoverjs ./.solcover.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@openzeppelin/contracts": "^2.4.0",
+    "bignumber.js": "^9.0.0",
+    "dotenv": "^8.2.0",
+    "ganache-cli": "^6.4.1",
+    "lowdb": "^1.0.0",
+    "mongoose": "^5.7.13",
+    "openzeppelin-test-helpers": "^0.1.2",
+    "solidity-coverage": "0.7.0-beta.0",
+    "surya": "^0.2.11",
+    "truffle": "^5.0.6",
+    "truffle-hdwallet-provider": "^1.0.17",
+    "uuid": "^3.3.3",
+    "yargs": "^15.0.2"
+  },
+  "devDependencies": {
+    "eslint": "^6.7.2",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1"
+  }
+}

@@ -1,0 +1,2975 @@
+{
+  "contractName": "TransferRestrictions",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "SUCCESS_CODE",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "FAILURE_TIMELOCK_MESSAGE",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "FAILURE_NON_WHITELIST",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "FAILURE_TIMELOCK",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "FAILURE_CONTRACT_PAUSED_MESSAGE",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "FAILURE_CONTRACT_PAUSED",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "UNKNOWN_ERROR",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "FAILURE_NON_WHITELIST_MESSAGE",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "SUCCESS_MESSAGE",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "name": "_validators",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "from",
+          "type": "address"
+        },
+        {
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "detectTransferRestriction",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "restrictionCode",
+          "type": "uint8"
+        }
+      ],
+      "name": "messageForTransferRestriction",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getSuccessCode",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.8+commit.23d335f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"SUCCESS_CODE\",\"outputs\":[{\"name\":\"\",\"type\":\"uint8\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"FAILURE_TIMELOCK_MESSAGE\",\"outputs\":[{\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"FAILURE_NON_WHITELIST\",\"outputs\":[{\"name\":\"\",\"type\":\"uint8\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"FAILURE_TIMELOCK\",\"outputs\":[{\"name\":\"\",\"type\":\"uint8\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"getSuccessCode\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"FAILURE_CONTRACT_PAUSED_MESSAGE\",\"outputs\":[{\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"restrictionCode\",\"type\":\"uint8\"}],\"name\":\"messageForTransferRestriction\",\"outputs\":[{\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"FAILURE_CONTRACT_PAUSED\",\"outputs\":[{\"name\":\"\",\"type\":\"uint8\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"UNKNOWN_ERROR\",\"outputs\":[{\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"FAILURE_NON_WHITELIST_MESSAGE\",\"outputs\":[{\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"from\",\"type\":\"address\"},{\"name\":\"to\",\"type\":\"address\"},{\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"detectTransferRestriction\",\"outputs\":[{\"name\":\"\",\"type\":\"uint8\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"SUCCESS_MESSAGE\",\"outputs\":[{\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"name\":\"_validators\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"}],\"devdoc\":{\"details\":\"Defines the rules the validate transfers and the error messages\",\"methods\":{},\"title\":\"TransferRestrictions\"},\"userdoc\":{\"methods\":{\"constructor\":\"Constructor sets the address the validators contract which should be the token contract\",\"detectTransferRestriction(address,address,uint256)\":{\"notice\":\"This function detects whether a transfer should be restricted and not allowed. If the function returns SUCCESS_CODE (0) then it should be allowed.\"},\"messageForTransferRestriction(uint8)\":{\"notice\":\"This function allows a wallet or other client to get a human readable string to show a user if a transfer was restricted.  It should return enough information for the user to know why it failed.\"}}}},\"settings\":{\"compilationTarget\":{\"/Users/JohnDoe/Desktop/erc1404-simulator/presetupERC1404/contracts/restrictions/TransferRestrictions.sol\":\"TransferRestrictions\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/JohnDoe/Desktop/erc1404-simulator/presetupERC1404/contracts/1404/IERC1404.sol\":{\"keccak256\":\"0x9161f802112edd22fdcf61102d36d97ef0af064bfe8b44443f05ac7d4caacc4f\",\"urls\":[\"bzzr://ab539cb8d8fd42e2deaeca130ea5bf80661a18449ad2e88fc241dfc97cc741b7\"]},\"/Users/JohnDoe/Desktop/erc1404-simulator/presetupERC1404/contracts/1404/IERC1404Validators.sol\":{\"keccak256\":\"0xccb4bf917ef0c2e0473ece8d6e3fc2e313746ab073d306316490d9d879376c2c\",\"urls\":[\"bzzr://88d9039cfa208871eaa09741ecf20379f6e2da384290f701ecf6cb4af5c6bdb0\"]},\"/Users/JohnDoe/Desktop/erc1404-simulator/presetupERC1404/contracts/restrictions/RestrictionMessages.sol\":{\"keccak256\":\"0x5bfa80efb83648d2d7d8f20ff9544ba1fea48e6d54c4ff1dbd934b3d4e482645\",\"urls\":[\"bzzr://03181ff09f19dbb6deec0cdcb57a3a69fa499d87041b8c1095cb4df8da5aacb4\"]},\"/Users/JohnDoe/Desktop/erc1404-simulator/presetupERC1404/contracts/restrictions/TransferRestrictions.sol\":{\"keccak256\":\"0x23b871e5c01024d60577a4acd75f35d1dbed8154e080bcac1ac90db16333b3eb\",\"urls\":[\"bzzr://89cac6dd3d75de4ac68e7d475dbbeafafcefc8a4897028171ca200004ed5e730\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b50604051602080610c378339810180604052602081101561003057600080fd5b8101908080519060200190929190505050806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555050610ba6806100916000396000f3fe608060405234801561001057600080fd5b50600436106100b45760003560e01c80637f4ab1dd116100715780637f4ab1dd1461024957806386a299fb146102f357806397af674414610317578063c89344621461039a578063d4ce14151461041d578063e7984d17146104a5576100b4565b80630e969a05146100b9578063191035ab146100dd5780631fb45ec0146101605780632ddabee8146101845780635ec64759146101a8578063777eb99f146101c6575b600080fd5b6100c1610528565b604051808260ff1660ff16815260200191505060405180910390f35b6100e561052d565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561012557808201518184015260208101905061010a565b50505050905090810190601f1680156101525780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b610168610549565b604051808260ff1660ff16815260200191505060405180910390f35b61018c61054e565b604051808260ff1660ff16815260200191505060405180910390f35b6101b0610553565b6040518082815260200191505060405180910390f35b6101ce61055e565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561020e5780820151818401526020810190506101f3565b50505050905090810190601f16801561023b5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b6102786004803603602081101561025f57600080fd5b81019080803560ff16906020019092919050505061057a565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156102b857808201518184015260208101905061029d565b50505050905090810190601f1680156102e55780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b6102fb610693565b604051808260ff1660ff16815260200191505060405180910390f35b61031f610698565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561035f578082015181840152602081019050610344565b50505050905090810190601f16801561038c5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b6103a26106d1565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156103e25780820151818401526020810190506103c7565b50505050905090810190601f16801561040f5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b6104896004803603606081101561043357600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190803573ffffffffffffffffffffffffffffffffffffffff169060200190929190803590602001909291905050506106ed565b604051808260ff1660ff16815260200191505060405180910390f35b6104ad610a93565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156104ed5780820151818401526020810190506104d2565b50505050905090810190601f16801561051a5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b600081565b604051806060016040528060358152602001610b466035913981565b600181565b600281565b60008060ff16905090565b6040518060600160405280603d8152602001610acd603d913981565b6060600060ff168260ff1614156105c8576040518060400160405280600781526020017f5355434345535300000000000000000000000000000000000000000000000000815250905061068e565b600160ff168260ff1614156105f7576040518060600160405280603c8152602001610b0a603c9139905061068e565b600260ff168260ff16141561062657604051806060016040528060358152602001610b4660359139905061068e565b600360ff168260ff161415610655576040518060600160405280603d8152602001610acd603d9139905061068e565b6040518060400160405280601281526020017f556e6b6e6f776e204572726f7220436f6465000000000000000000000000000081525090505b919050565b600381565b6040518060400160405280601281526020017f556e6b6e6f776e204572726f7220436f6465000000000000000000000000000081525081565b6040518060600160405280603c8152602001610b0a603c913981565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166399da091d85856040518363ffffffff1660e01b8152600401808373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019250505060206040518083038186803b1580156107c157600080fd5b505afa1580156107d5573d6000803e3d6000fd5b505050506040513d60208110156107eb57600080fd5b81019080805190602001909291905050506108095760019050610a8c565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663c697e4a385846000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166370a08231896040518263ffffffff1660e01b8152600401808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060206040518083038186803b1580156108e657600080fd5b505afa1580156108fa573d6000803e3d6000fd5b505050506040513d602081101561091057600080fd5b81019080805190602001909291905050506040518463ffffffff1660e01b8152600401808473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001838152602001828152602001935050505060206040518083038186803b15801561098f57600080fd5b505afa1580156109a3573d6000803e3d6000fd5b505050506040513d60208110156109b957600080fd5b81019080805190602001909291905050506109d75760029050610a8c565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16635c975abb6040518163ffffffff1660e01b815260040160206040518083038186803b158015610a3e57600080fd5b505afa158015610a52573d6000803e3d6000fd5b505050506040513d6020811015610a6857600080fd5b810190808051906020019092919050505015610a875760039050610a8c565b600090505b9392505050565b6040518060400160405280600781526020017f53554343455353000000000000000000000000000000000000000000000000008152508156fe546865207472616e736665722077617320726573747269637465642064756520746f2074686520636f6e7472616374206265696e67207061757365642e546865207472616e736665722077617320726573747269637465642064756520746f207768697465206c69737420636f6e66696775726174696f6e2e546865207472616e736665722077617320726573747269637465642064756520746f2074696d656c6f636b656420746f6b656e732ea165627a7a723058201eaa2da0f77f21a9d84d9d7bff1ffa39fedc518d2128ab707e9b1ed1c896d8cb0029",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100b45760003560e01c80637f4ab1dd116100715780637f4ab1dd1461024957806386a299fb146102f357806397af674414610317578063c89344621461039a578063d4ce14151461041d578063e7984d17146104a5576100b4565b80630e969a05146100b9578063191035ab146100dd5780631fb45ec0146101605780632ddabee8146101845780635ec64759146101a8578063777eb99f146101c6575b600080fd5b6100c1610528565b604051808260ff1660ff16815260200191505060405180910390f35b6100e561052d565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561012557808201518184015260208101905061010a565b50505050905090810190601f1680156101525780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b610168610549565b604051808260ff1660ff16815260200191505060405180910390f35b61018c61054e565b604051808260ff1660ff16815260200191505060405180910390f35b6101b0610553565b6040518082815260200191505060405180910390f35b6101ce61055e565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561020e5780820151818401526020810190506101f3565b50505050905090810190601f16801561023b5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b6102786004803603602081101561025f57600080fd5b81019080803560ff16906020019092919050505061057a565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156102b857808201518184015260208101905061029d565b50505050905090810190601f1680156102e55780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b6102fb610693565b604051808260ff1660ff16815260200191505060405180910390f35b61031f610698565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561035f578082015181840152602081019050610344565b50505050905090810190601f16801561038c5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b6103a26106d1565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156103e25780820151818401526020810190506103c7565b50505050905090810190601f16801561040f5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b6104896004803603606081101561043357600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190803573ffffffffffffffffffffffffffffffffffffffff169060200190929190803590602001909291905050506106ed565b604051808260ff1660ff16815260200191505060405180910390f35b6104ad610a93565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156104ed5780820151818401526020810190506104d2565b50505050905090810190601f16801561051a5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b600081565b604051806060016040528060358152602001610b466035913981565b600181565b600281565b60008060ff16905090565b6040518060600160405280603d8152602001610acd603d913981565b6060600060ff168260ff1614156105c8576040518060400160405280600781526020017f5355434345535300000000000000000000000000000000000000000000000000815250905061068e565b600160ff168260ff1614156105f7576040518060600160405280603c8152602001610b0a603c9139905061068e565b600260ff168260ff16141561062657604051806060016040528060358152602001610b4660359139905061068e565b600360ff168260ff161415610655576040518060600160405280603d8152602001610acd603d9139905061068e565b6040518060400160405280601281526020017f556e6b6e6f776e204572726f7220436f6465000000000000000000000000000081525090505b919050565b600381565b6040518060400160405280601281526020017f556e6b6e6f776e204572726f7220436f6465000000000000000000000000000081525081565b6040518060600160405280603c8152602001610b0a603c913981565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166399da091d85856040518363ffffffff1660e01b8152600401808373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019250505060206040518083038186803b1580156107c157600080fd5b505afa1580156107d5573d6000803e3d6000fd5b505050506040513d60208110156107eb57600080fd5b81019080805190602001909291905050506108095760019050610a8c565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663c697e4a385846000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166370a08231896040518263ffffffff1660e01b8152600401808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060206040518083038186803b1580156108e657600080fd5b505afa1580156108fa573d6000803e3d6000fd5b505050506040513d602081101561091057600080fd5b81019080805190602001909291905050506040518463ffffffff1660e01b8152600401808473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001838152602001828152602001935050505060206040518083038186803b15801561098f57600080fd5b505afa1580156109a3573d6000803e3d6000fd5b505050506040513d60208110156109b957600080fd5b81019080805190602001909291905050506109d75760029050610a8c565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16635c975abb6040518163ffffffff1660e01b815260040160206040518083038186803b158015610a3e57600080fd5b505afa158015610a52573d6000803e3d6000fd5b505050506040513d6020811015610a6857600080fd5b810190808051906020019092919050505015610a875760039050610a8c565b600090505b9392505050565b6040518060400160405280600781526020017f53554343455353000000000000000000000000000000000000000000000000008152508156fe546865207472616e736665722077617320726573747269637465642064756520746f2074686520636f6e7472616374206265696e67207061757365642e546865207472616e736665722077617320726573747269637465642064756520746f207768697465206c69737420636f6e66696775726174696f6e2e546865207472616e736665722077617320726573747269637465642064756520746f2074696d656c6f636b656420746f6b656e732ea165627a7a723058201eaa2da0f77f21a9d84d9d7bff1ffa39fedc518d2128ab707e9b1ed1c896d8cb0029",
+  "sourceMap": "245:2212:9:-;;;475:105;8:9:-1;5:2;;;30:1;27;20:12;5:2;475:105:9;;;;;;;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;475:105:9;;;;;;;;;;;;;;;;561:11;529:10;;:44;;;;;;;;;;;;;;;;;;475:105;245:2212;;;;;;",
+  "deployedSourceMap": "245:2212:9:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;245:2212:9;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;99:38:8;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;479:105;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;479:105:8;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;143:47;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;196:42;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;2363:92:9;;;:::i;:::-;;;;;;;;;;;;;;;;;;;590:120:8;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;590:120:8;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1752:605:9;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;1752:605:9;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;1752:605:9;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;244:49:8;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;716:59;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;716:59:8;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;356:117;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;356:117:8;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;756:768:9;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;756:768:9;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;300:50:8;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;300:50:8;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;99:38;136:1;99:38;:::o;479:105::-;;;;;;;;;;;;;;;;;;;:::o;143:47::-;189:1;143:47;:::o;196:42::-;237:1;196:42;:::o;2363:92:9:-;2412:7;136:1:8;2429:19:9;;;;2363:92;:::o;590:120:8:-;;;;;;;;;;;;;;;;;;;:::o;1752:605:9:-;1862:13;136:1:8;1895:31:9;;:15;:31;;;1891:84;;;1949:15;;;;;;;;;;;;;;;;;1942:22;;;;1891:84;189:1:8;1989:40:9;;:15;:40;;;1985:107;;;2052:29;;;;;;;;;;;;;;;;;2045:36;;;;1985:107;237:1:8;2106:35:9;;:15;:35;;;2102:97;;;2164:24;;;;;;;;;;;;;;;;;2157:31;;;;2102:97;292:1:8;2213:42:9;;:15;:42;;;2209:111;;;2278:31;;;;;;;;;;;;;;;;;2271:38;;;;2209:111;2337:13;;;;;;;;;;;;;;;;;2330:20;;1752:605;;;;:::o;244:49:8:-;292:1;244:49;:::o;716:59::-;;;;;;;;;;;;;;;;;;;:::o;356:117::-;;;;;;;;;;;;;;;;;;;:::o;756:768:9:-;881:5;961:10;;;;;;;;;;;:26;;;988:4;993:2;961:35;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;961:35:9;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;961:35:9;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;961:35:9;;;;;;;;;;;;;;;;957:94;;189:1:8;1012:28:9;;;;957:94;1140:10;;;;;;;;;;;:24;;;1165:4;1171:6;1179:10;;;;;;;;;;;:20;;;1200:4;1179:26;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1179:26:9;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;1179:26:9;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;1179:26:9;;;;;;;;;;;;;;;;1140:66;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1140:66:9;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;1140:66:9;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;1140:66:9;;;;;;;;;;;;;;;;1136:120;;237:1:8;1222:23:9;;;;1136:120;1352:10;;;;;;;;;;;:17;;;:19;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1352:19:9;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;1352:19:9;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;1352:19:9;;;;;;;;;;;;;;;;1349:79;;;292:1:8;1387:30:9;;;;1349:79;136:1:8;1498:19:9;;756:768;;;;;;:::o;300:50:8:-;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity 0.5.8;\n\nimport \"../1404/IERC1404.sol\";\nimport \"../1404/IERC1404Validators.sol\";\nimport \"./RestrictionMessages.sol\";\n\n\n/**\n * @title TransferRestrictions\n * @dev Defines the rules the validate transfers and the error messages\n */\ncontract TransferRestrictions is IERC1404, RestrictionMessages, IERC1404Success {\n\n    IERC1404Validators validators;\n\n    /**\n    Constructor sets the address the validators contract which should be the token contract\n    */\n    constructor(address _validators) public\n    {\n        validators = IERC1404Validators(_validators);\n    }\n\n    /**\n    This function detects whether a transfer should be restricted and not allowed.\n    If the function returns SUCCESS_CODE (0) then it should be allowed.\n    */\n    function detectTransferRestriction (address from, address to, uint256 amount)\n        external\n        view\n        returns (uint8)\n    {\n        // Confirm that that addresses are whitelisted\n        if(!validators.checkWhitelists(from,to)) {\n            return FAILURE_NON_WHITELIST;\n        }\n\n        // If the from account is locked up, then don't allow the transfer\n        if(!validators.checkTimelock(from, amount, validators.balanceOf(from))) {\n            return FAILURE_TIMELOCK;\n        }\n\n        // If the entire contract is paused, then the transfer should be prevented\n        if(validators.paused()) {\n            return FAILURE_CONTRACT_PAUSED;\n        }\n\n        // If no restrictions were triggered return success\n        return SUCCESS_CODE;\n    }\n\n    /**\n    This function allows a wallet or other client to get a human readable string to show\n    a user if a transfer was restricted.  It should return enough information for the user\n    to know why it failed.\n    */\n    function messageForTransferRestriction (uint8 restrictionCode)\n        external\n        view\n        returns (string memory)\n    {\n        if (restrictionCode == SUCCESS_CODE) {\n            return SUCCESS_MESSAGE;\n        }\n\n        if (restrictionCode == FAILURE_NON_WHITELIST) {\n            return FAILURE_NON_WHITELIST_MESSAGE;\n        }\n\n        if (restrictionCode == FAILURE_TIMELOCK) {\n            return FAILURE_TIMELOCK_MESSAGE;\n        }\n\n        if (restrictionCode == FAILURE_CONTRACT_PAUSED) {\n            return FAILURE_CONTRACT_PAUSED_MESSAGE;\n        }\n\n        return UNKNOWN_ERROR;\n    }\n\n    function getSuccessCode() external view returns (uint256) {\n      return SUCCESS_CODE;\n    }\n}",
+  "sourcePath": "/Users/JohnDoe/Desktop/erc1404-simulator/presetupERC1404/contracts/restrictions/TransferRestrictions.sol",
+  "ast": {
+    "absolutePath": "/Users/JohnDoe/Desktop/erc1404-simulator/presetupERC1404/contracts/restrictions/TransferRestrictions.sol",
+    "exportedSymbols": {
+      "TransferRestrictions": [
+        966
+      ]
+    },
+    "id": 967,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 851,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".8"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:9"
+      },
+      {
+        "absolutePath": "/Users/JohnDoe/Desktop/erc1404-simulator/presetupERC1404/contracts/1404/IERC1404.sol",
+        "file": "../1404/IERC1404.sol",
+        "id": 852,
+        "nodeType": "ImportDirective",
+        "scope": 967,
+        "sourceUnit": 32,
+        "src": "24:30:9",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/JohnDoe/Desktop/erc1404-simulator/presetupERC1404/contracts/1404/IERC1404Validators.sol",
+        "file": "../1404/IERC1404Validators.sol",
+        "id": 853,
+        "nodeType": "ImportDirective",
+        "scope": 967,
+        "sourceUnit": 67,
+        "src": "55:40:9",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/JohnDoe/Desktop/erc1404-simulator/presetupERC1404/contracts/restrictions/RestrictionMessages.sol",
+        "file": "./RestrictionMessages.sol",
+        "id": 854,
+        "nodeType": "ImportDirective",
+        "scope": 967,
+        "sourceUnit": 850,
+        "src": "96:35:9",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 855,
+              "name": "IERC1404",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 20,
+              "src": "278:8:9",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_IERC1404_$20",
+                "typeString": "contract IERC1404"
+              }
+            },
+            "id": 856,
+            "nodeType": "InheritanceSpecifier",
+            "src": "278:8:9"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 857,
+              "name": "RestrictionMessages",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 849,
+              "src": "288:19:9",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_RestrictionMessages_$849",
+                "typeString": "contract RestrictionMessages"
+              }
+            },
+            "id": 858,
+            "nodeType": "InheritanceSpecifier",
+            "src": "288:19:9"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 859,
+              "name": "IERC1404Success",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 31,
+              "src": "309:15:9",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_IERC1404Success_$31",
+                "typeString": "contract IERC1404Success"
+              }
+            },
+            "id": 860,
+            "nodeType": "InheritanceSpecifier",
+            "src": "309:15:9"
+          }
+        ],
+        "contractDependencies": [
+          20,
+          26,
+          31,
+          849
+        ],
+        "contractKind": "contract",
+        "documentation": "@title TransferRestrictions\n@dev Defines the rules the validate transfers and the error messages",
+        "fullyImplemented": true,
+        "id": 966,
+        "linearizedBaseContracts": [
+          966,
+          31,
+          849,
+          20,
+          26
+        ],
+        "name": "TransferRestrictions",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 862,
+            "name": "validators",
+            "nodeType": "VariableDeclaration",
+            "scope": 966,
+            "src": "332:29:9",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_IERC1404Validators_$66",
+              "typeString": "contract IERC1404Validators"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 861,
+              "name": "IERC1404Validators",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 66,
+              "src": "332:18:9",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_IERC1404Validators_$66",
+                "typeString": "contract IERC1404Validators"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 873,
+              "nodeType": "Block",
+              "src": "519:61:9",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 871,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 867,
+                      "name": "validators",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 862,
+                      "src": "529:10:9",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_IERC1404Validators_$66",
+                        "typeString": "contract IERC1404Validators"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 869,
+                          "name": "_validators",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 864,
+                          "src": "561:11:9",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        ],
+                        "id": 868,
+                        "name": "IERC1404Validators",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 66,
+                        "src": "542:18:9",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_IERC1404Validators_$66_$",
+                          "typeString": "type(contract IERC1404Validators)"
+                        }
+                      },
+                      "id": 870,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "542:31:9",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_IERC1404Validators_$66",
+                        "typeString": "contract IERC1404Validators"
+                      }
+                    },
+                    "src": "529:44:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IERC1404Validators_$66",
+                      "typeString": "contract IERC1404Validators"
+                    }
+                  },
+                  "id": 872,
+                  "nodeType": "ExpressionStatement",
+                  "src": "529:44:9"
+                }
+              ]
+            },
+            "documentation": "Constructor sets the address the validators contract which should be the token contract",
+            "id": 874,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 865,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 864,
+                  "name": "_validators",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 874,
+                  "src": "487:19:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 863,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "487:7:9",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "486:21:9"
+            },
+            "returnParameters": {
+              "id": 866,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "519:0:9"
+            },
+            "scope": 966,
+            "src": "475:105:9",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 918,
+              "nodeType": "Block",
+              "src": "892:632:9",
+              "statements": [
+                {
+                  "condition": {
+                    "argumentTypes": null,
+                    "id": 890,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "UnaryOperation",
+                    "operator": "!",
+                    "prefix": true,
+                    "src": "960:36:9",
+                    "subExpression": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 887,
+                          "name": "from",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 876,
+                          "src": "988:4:9",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "id": 888,
+                          "name": "to",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 878,
+                          "src": "993:2:9",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          },
+                          {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 885,
+                          "name": "validators",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 862,
+                          "src": "961:10:9",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_contract$_IERC1404Validators_$66",
+                            "typeString": "contract IERC1404Validators"
+                          }
+                        },
+                        "id": 886,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "checkWhitelists",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 54,
+                        "src": "961:26:9",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_external_view$_t_address_$_t_address_$returns$_t_bool_$",
+                          "typeString": "function (address,address) view external returns (bool)"
+                        }
+                      },
+                      "id": 889,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "961:35:9",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": null,
+                  "id": 894,
+                  "nodeType": "IfStatement",
+                  "src": "957:94:9",
+                  "trueBody": {
+                    "id": 893,
+                    "nodeType": "Block",
+                    "src": "998:53:9",
+                    "statements": [
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 891,
+                          "name": "FAILURE_NON_WHITELIST",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 827,
+                          "src": "1019:21:9",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint8",
+                            "typeString": "uint8"
+                          }
+                        },
+                        "functionReturnParameters": 884,
+                        "id": 892,
+                        "nodeType": "Return",
+                        "src": "1012:28:9"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "condition": {
+                    "argumentTypes": null,
+                    "id": 904,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "UnaryOperation",
+                    "operator": "!",
+                    "prefix": true,
+                    "src": "1139:67:9",
+                    "subExpression": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 897,
+                          "name": "from",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 876,
+                          "src": "1165:4:9",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "id": 898,
+                          "name": "amount",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 880,
+                          "src": "1171:6:9",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "id": 901,
+                              "name": "from",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 876,
+                              "src": "1200:4:9",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                              }
+                            ],
+                            "expression": {
+                              "argumentTypes": null,
+                              "id": 899,
+                              "name": "validators",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 862,
+                              "src": "1179:10:9",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_contract$_IERC1404Validators_$66",
+                                "typeString": "contract IERC1404Validators"
+                              }
+                            },
+                            "id": 900,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "balanceOf",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": 40,
+                            "src": "1179:20:9",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_external_view$_t_address_$returns$_t_uint256_$",
+                              "typeString": "function (address) view external returns (uint256)"
+                            }
+                          },
+                          "id": 902,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "1179:26:9",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          },
+                          {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          },
+                          {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 895,
+                          "name": "validators",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 862,
+                          "src": "1140:10:9",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_contract$_IERC1404Validators_$66",
+                            "typeString": "contract IERC1404Validators"
+                          }
+                        },
+                        "id": 896,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "checkTimelock",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 65,
+                        "src": "1140:24:9",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_external_view$_t_address_$_t_uint256_$_t_uint256_$returns$_t_bool_$",
+                          "typeString": "function (address,uint256,uint256) view external returns (bool)"
+                        }
+                      },
+                      "id": 903,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1140:66:9",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": null,
+                  "id": 908,
+                  "nodeType": "IfStatement",
+                  "src": "1136:120:9",
+                  "trueBody": {
+                    "id": 907,
+                    "nodeType": "Block",
+                    "src": "1208:48:9",
+                    "statements": [
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 905,
+                          "name": "FAILURE_TIMELOCK",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 830,
+                          "src": "1229:16:9",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint8",
+                            "typeString": "uint8"
+                          }
+                        },
+                        "functionReturnParameters": 884,
+                        "id": 906,
+                        "nodeType": "Return",
+                        "src": "1222:23:9"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "condition": {
+                    "argumentTypes": null,
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 909,
+                        "name": "validators",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 862,
+                        "src": "1352:10:9",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_IERC1404Validators_$66",
+                          "typeString": "contract IERC1404Validators"
+                        }
+                      },
+                      "id": 910,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "paused",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 45,
+                      "src": "1352:17:9",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_view$__$returns$_t_bool_$",
+                        "typeString": "function () view external returns (bool)"
+                      }
+                    },
+                    "id": 911,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1352:19:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": null,
+                  "id": 915,
+                  "nodeType": "IfStatement",
+                  "src": "1349:79:9",
+                  "trueBody": {
+                    "id": 914,
+                    "nodeType": "Block",
+                    "src": "1373:55:9",
+                    "statements": [
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 912,
+                          "name": "FAILURE_CONTRACT_PAUSED",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 833,
+                          "src": "1394:23:9",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint8",
+                            "typeString": "uint8"
+                          }
+                        },
+                        "functionReturnParameters": 884,
+                        "id": 913,
+                        "nodeType": "Return",
+                        "src": "1387:30:9"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 916,
+                    "name": "SUCCESS_CODE",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 824,
+                    "src": "1505:12:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "functionReturnParameters": 884,
+                  "id": 917,
+                  "nodeType": "Return",
+                  "src": "1498:19:9"
+                }
+              ]
+            },
+            "documentation": "This function detects whether a transfer should be restricted and not allowed.\nIf the function returns SUCCESS_CODE (0) then it should be allowed.",
+            "id": 919,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "detectTransferRestriction",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 881,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 876,
+                  "name": "from",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 919,
+                  "src": "792:12:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 875,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "792:7:9",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 878,
+                  "name": "to",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 919,
+                  "src": "806:10:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 877,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "806:7:9",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 880,
+                  "name": "amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 919,
+                  "src": "818:14:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 879,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "818:7:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "791:42:9"
+            },
+            "returnParameters": {
+              "id": 884,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 883,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 919,
+                  "src": "881:5:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 882,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "881:5:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "880:7:9"
+            },
+            "scope": 966,
+            "src": "756:768:9",
+            "stateMutability": "view",
+            "superFunction": 12,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 956,
+              "nodeType": "Block",
+              "src": "1881:476:9",
+              "statements": [
+                {
+                  "condition": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    },
+                    "id": 928,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "id": 926,
+                      "name": "restrictionCode",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 921,
+                      "src": "1895:15:9",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "==",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "id": 927,
+                      "name": "SUCCESS_CODE",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 824,
+                      "src": "1914:12:9",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      }
+                    },
+                    "src": "1895:31:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": null,
+                  "id": 932,
+                  "nodeType": "IfStatement",
+                  "src": "1891:84:9",
+                  "trueBody": {
+                    "id": 931,
+                    "nodeType": "Block",
+                    "src": "1928:47:9",
+                    "statements": [
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 929,
+                          "name": "SUCCESS_MESSAGE",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 836,
+                          "src": "1949:15:9",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_string_memory",
+                            "typeString": "string memory"
+                          }
+                        },
+                        "functionReturnParameters": 925,
+                        "id": 930,
+                        "nodeType": "Return",
+                        "src": "1942:22:9"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "condition": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    },
+                    "id": 935,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "id": 933,
+                      "name": "restrictionCode",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 921,
+                      "src": "1989:15:9",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "==",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "id": 934,
+                      "name": "FAILURE_NON_WHITELIST",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 827,
+                      "src": "2008:21:9",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      }
+                    },
+                    "src": "1989:40:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": null,
+                  "id": 939,
+                  "nodeType": "IfStatement",
+                  "src": "1985:107:9",
+                  "trueBody": {
+                    "id": 938,
+                    "nodeType": "Block",
+                    "src": "2031:61:9",
+                    "statements": [
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 936,
+                          "name": "FAILURE_NON_WHITELIST_MESSAGE",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 839,
+                          "src": "2052:29:9",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_string_memory",
+                            "typeString": "string memory"
+                          }
+                        },
+                        "functionReturnParameters": 925,
+                        "id": 937,
+                        "nodeType": "Return",
+                        "src": "2045:36:9"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "condition": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    },
+                    "id": 942,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "id": 940,
+                      "name": "restrictionCode",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 921,
+                      "src": "2106:15:9",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "==",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "id": 941,
+                      "name": "FAILURE_TIMELOCK",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 830,
+                      "src": "2125:16:9",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      }
+                    },
+                    "src": "2106:35:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": null,
+                  "id": 946,
+                  "nodeType": "IfStatement",
+                  "src": "2102:97:9",
+                  "trueBody": {
+                    "id": 945,
+                    "nodeType": "Block",
+                    "src": "2143:56:9",
+                    "statements": [
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 943,
+                          "name": "FAILURE_TIMELOCK_MESSAGE",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 842,
+                          "src": "2164:24:9",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_string_memory",
+                            "typeString": "string memory"
+                          }
+                        },
+                        "functionReturnParameters": 925,
+                        "id": 944,
+                        "nodeType": "Return",
+                        "src": "2157:31:9"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "condition": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    },
+                    "id": 949,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "id": 947,
+                      "name": "restrictionCode",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 921,
+                      "src": "2213:15:9",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "==",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "id": 948,
+                      "name": "FAILURE_CONTRACT_PAUSED",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 833,
+                      "src": "2232:23:9",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      }
+                    },
+                    "src": "2213:42:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": null,
+                  "id": 953,
+                  "nodeType": "IfStatement",
+                  "src": "2209:111:9",
+                  "trueBody": {
+                    "id": 952,
+                    "nodeType": "Block",
+                    "src": "2257:63:9",
+                    "statements": [
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 950,
+                          "name": "FAILURE_CONTRACT_PAUSED_MESSAGE",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 845,
+                          "src": "2278:31:9",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_string_memory",
+                            "typeString": "string memory"
+                          }
+                        },
+                        "functionReturnParameters": 925,
+                        "id": 951,
+                        "nodeType": "Return",
+                        "src": "2271:38:9"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 954,
+                    "name": "UNKNOWN_ERROR",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 848,
+                    "src": "2337:13:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_memory",
+                      "typeString": "string memory"
+                    }
+                  },
+                  "functionReturnParameters": 925,
+                  "id": 955,
+                  "nodeType": "Return",
+                  "src": "2330:20:9"
+                }
+              ]
+            },
+            "documentation": "This function allows a wallet or other client to get a human readable string to show\na user if a transfer was restricted.  It should return enough information for the user\nto know why it failed.",
+            "id": 957,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "messageForTransferRestriction",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 922,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 921,
+                  "name": "restrictionCode",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 957,
+                  "src": "1792:21:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 920,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1792:5:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1791:23:9"
+            },
+            "returnParameters": {
+              "id": 925,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 924,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 957,
+                  "src": "1862:13:9",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 923,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1862:6:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1861:15:9"
+            },
+            "scope": 966,
+            "src": "1752:605:9",
+            "stateMutability": "view",
+            "superFunction": 19,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 964,
+              "nodeType": "Block",
+              "src": "2421:34:9",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 962,
+                    "name": "SUCCESS_CODE",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 824,
+                    "src": "2436:12:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "functionReturnParameters": 961,
+                  "id": 963,
+                  "nodeType": "Return",
+                  "src": "2429:19:9"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 965,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getSuccessCode",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 958,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2386:2:9"
+            },
+            "returnParameters": {
+              "id": 961,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 960,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 965,
+                  "src": "2412:7:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 959,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2412:7:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2411:9:9"
+            },
+            "scope": 966,
+            "src": "2363:92:9",
+            "stateMutability": "view",
+            "superFunction": 25,
+            "visibility": "external"
+          }
+        ],
+        "scope": 967,
+        "src": "245:2212:9"
+      }
+    ],
+    "src": "0:2457:9"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/JohnDoe/Desktop/erc1404-simulator/presetupERC1404/contracts/restrictions/TransferRestrictions.sol",
+    "exportedSymbols": {
+      "TransferRestrictions": [
+        966
+      ]
+    },
+    "id": 967,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 851,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".8"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:9"
+      },
+      {
+        "absolutePath": "/Users/JohnDoe/Desktop/erc1404-simulator/presetupERC1404/contracts/1404/IERC1404.sol",
+        "file": "../1404/IERC1404.sol",
+        "id": 852,
+        "nodeType": "ImportDirective",
+        "scope": 967,
+        "sourceUnit": 32,
+        "src": "24:30:9",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/JohnDoe/Desktop/erc1404-simulator/presetupERC1404/contracts/1404/IERC1404Validators.sol",
+        "file": "../1404/IERC1404Validators.sol",
+        "id": 853,
+        "nodeType": "ImportDirective",
+        "scope": 967,
+        "sourceUnit": 67,
+        "src": "55:40:9",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/JohnDoe/Desktop/erc1404-simulator/presetupERC1404/contracts/restrictions/RestrictionMessages.sol",
+        "file": "./RestrictionMessages.sol",
+        "id": 854,
+        "nodeType": "ImportDirective",
+        "scope": 967,
+        "sourceUnit": 850,
+        "src": "96:35:9",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 855,
+              "name": "IERC1404",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 20,
+              "src": "278:8:9",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_IERC1404_$20",
+                "typeString": "contract IERC1404"
+              }
+            },
+            "id": 856,
+            "nodeType": "InheritanceSpecifier",
+            "src": "278:8:9"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 857,
+              "name": "RestrictionMessages",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 849,
+              "src": "288:19:9",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_RestrictionMessages_$849",
+                "typeString": "contract RestrictionMessages"
+              }
+            },
+            "id": 858,
+            "nodeType": "InheritanceSpecifier",
+            "src": "288:19:9"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 859,
+              "name": "IERC1404Success",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 31,
+              "src": "309:15:9",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_IERC1404Success_$31",
+                "typeString": "contract IERC1404Success"
+              }
+            },
+            "id": 860,
+            "nodeType": "InheritanceSpecifier",
+            "src": "309:15:9"
+          }
+        ],
+        "contractDependencies": [
+          20,
+          26,
+          31,
+          849
+        ],
+        "contractKind": "contract",
+        "documentation": "@title TransferRestrictions\n@dev Defines the rules the validate transfers and the error messages",
+        "fullyImplemented": true,
+        "id": 966,
+        "linearizedBaseContracts": [
+          966,
+          31,
+          849,
+          20,
+          26
+        ],
+        "name": "TransferRestrictions",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 862,
+            "name": "validators",
+            "nodeType": "VariableDeclaration",
+            "scope": 966,
+            "src": "332:29:9",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_IERC1404Validators_$66",
+              "typeString": "contract IERC1404Validators"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 861,
+              "name": "IERC1404Validators",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 66,
+              "src": "332:18:9",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_IERC1404Validators_$66",
+                "typeString": "contract IERC1404Validators"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 873,
+              "nodeType": "Block",
+              "src": "519:61:9",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 871,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 867,
+                      "name": "validators",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 862,
+                      "src": "529:10:9",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_IERC1404Validators_$66",
+                        "typeString": "contract IERC1404Validators"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 869,
+                          "name": "_validators",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 864,
+                          "src": "561:11:9",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        ],
+                        "id": 868,
+                        "name": "IERC1404Validators",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 66,
+                        "src": "542:18:9",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_IERC1404Validators_$66_$",
+                          "typeString": "type(contract IERC1404Validators)"
+                        }
+                      },
+                      "id": 870,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "542:31:9",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_IERC1404Validators_$66",
+                        "typeString": "contract IERC1404Validators"
+                      }
+                    },
+                    "src": "529:44:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IERC1404Validators_$66",
+                      "typeString": "contract IERC1404Validators"
+                    }
+                  },
+                  "id": 872,
+                  "nodeType": "ExpressionStatement",
+                  "src": "529:44:9"
+                }
+              ]
+            },
+            "documentation": "Constructor sets the address the validators contract which should be the token contract",
+            "id": 874,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 865,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 864,
+                  "name": "_validators",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 874,
+                  "src": "487:19:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 863,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "487:7:9",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "486:21:9"
+            },
+            "returnParameters": {
+              "id": 866,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "519:0:9"
+            },
+            "scope": 966,
+            "src": "475:105:9",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 918,
+              "nodeType": "Block",
+              "src": "892:632:9",
+              "statements": [
+                {
+                  "condition": {
+                    "argumentTypes": null,
+                    "id": 890,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "UnaryOperation",
+                    "operator": "!",
+                    "prefix": true,
+                    "src": "960:36:9",
+                    "subExpression": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 887,
+                          "name": "from",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 876,
+                          "src": "988:4:9",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "id": 888,
+                          "name": "to",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 878,
+                          "src": "993:2:9",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          },
+                          {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 885,
+                          "name": "validators",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 862,
+                          "src": "961:10:9",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_contract$_IERC1404Validators_$66",
+                            "typeString": "contract IERC1404Validators"
+                          }
+                        },
+                        "id": 886,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "checkWhitelists",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 54,
+                        "src": "961:26:9",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_external_view$_t_address_$_t_address_$returns$_t_bool_$",
+                          "typeString": "function (address,address) view external returns (bool)"
+                        }
+                      },
+                      "id": 889,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "961:35:9",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": null,
+                  "id": 894,
+                  "nodeType": "IfStatement",
+                  "src": "957:94:9",
+                  "trueBody": {
+                    "id": 893,
+                    "nodeType": "Block",
+                    "src": "998:53:9",
+                    "statements": [
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 891,
+                          "name": "FAILURE_NON_WHITELIST",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 827,
+                          "src": "1019:21:9",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint8",
+                            "typeString": "uint8"
+                          }
+                        },
+                        "functionReturnParameters": 884,
+                        "id": 892,
+                        "nodeType": "Return",
+                        "src": "1012:28:9"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "condition": {
+                    "argumentTypes": null,
+                    "id": 904,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "UnaryOperation",
+                    "operator": "!",
+                    "prefix": true,
+                    "src": "1139:67:9",
+                    "subExpression": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 897,
+                          "name": "from",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 876,
+                          "src": "1165:4:9",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "id": 898,
+                          "name": "amount",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 880,
+                          "src": "1171:6:9",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "id": 901,
+                              "name": "from",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 876,
+                              "src": "1200:4:9",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                              }
+                            ],
+                            "expression": {
+                              "argumentTypes": null,
+                              "id": 899,
+                              "name": "validators",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 862,
+                              "src": "1179:10:9",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_contract$_IERC1404Validators_$66",
+                                "typeString": "contract IERC1404Validators"
+                              }
+                            },
+                            "id": 900,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "balanceOf",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": 40,
+                            "src": "1179:20:9",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_external_view$_t_address_$returns$_t_uint256_$",
+                              "typeString": "function (address) view external returns (uint256)"
+                            }
+                          },
+                          "id": 902,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "1179:26:9",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          },
+                          {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          },
+                          {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 895,
+                          "name": "validators",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 862,
+                          "src": "1140:10:9",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_contract$_IERC1404Validators_$66",
+                            "typeString": "contract IERC1404Validators"
+                          }
+                        },
+                        "id": 896,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "checkTimelock",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 65,
+                        "src": "1140:24:9",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_external_view$_t_address_$_t_uint256_$_t_uint256_$returns$_t_bool_$",
+                          "typeString": "function (address,uint256,uint256) view external returns (bool)"
+                        }
+                      },
+                      "id": 903,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1140:66:9",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": null,
+                  "id": 908,
+                  "nodeType": "IfStatement",
+                  "src": "1136:120:9",
+                  "trueBody": {
+                    "id": 907,
+                    "nodeType": "Block",
+                    "src": "1208:48:9",
+                    "statements": [
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 905,
+                          "name": "FAILURE_TIMELOCK",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 830,
+                          "src": "1229:16:9",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint8",
+                            "typeString": "uint8"
+                          }
+                        },
+                        "functionReturnParameters": 884,
+                        "id": 906,
+                        "nodeType": "Return",
+                        "src": "1222:23:9"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "condition": {
+                    "argumentTypes": null,
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 909,
+                        "name": "validators",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 862,
+                        "src": "1352:10:9",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_IERC1404Validators_$66",
+                          "typeString": "contract IERC1404Validators"
+                        }
+                      },
+                      "id": 910,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "paused",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 45,
+                      "src": "1352:17:9",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_view$__$returns$_t_bool_$",
+                        "typeString": "function () view external returns (bool)"
+                      }
+                    },
+                    "id": 911,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1352:19:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": null,
+                  "id": 915,
+                  "nodeType": "IfStatement",
+                  "src": "1349:79:9",
+                  "trueBody": {
+                    "id": 914,
+                    "nodeType": "Block",
+                    "src": "1373:55:9",
+                    "statements": [
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 912,
+                          "name": "FAILURE_CONTRACT_PAUSED",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 833,
+                          "src": "1394:23:9",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint8",
+                            "typeString": "uint8"
+                          }
+                        },
+                        "functionReturnParameters": 884,
+                        "id": 913,
+                        "nodeType": "Return",
+                        "src": "1387:30:9"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 916,
+                    "name": "SUCCESS_CODE",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 824,
+                    "src": "1505:12:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "functionReturnParameters": 884,
+                  "id": 917,
+                  "nodeType": "Return",
+                  "src": "1498:19:9"
+                }
+              ]
+            },
+            "documentation": "This function detects whether a transfer should be restricted and not allowed.\nIf the function returns SUCCESS_CODE (0) then it should be allowed.",
+            "id": 919,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "detectTransferRestriction",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 881,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 876,
+                  "name": "from",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 919,
+                  "src": "792:12:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 875,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "792:7:9",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 878,
+                  "name": "to",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 919,
+                  "src": "806:10:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 877,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "806:7:9",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 880,
+                  "name": "amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 919,
+                  "src": "818:14:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 879,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "818:7:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "791:42:9"
+            },
+            "returnParameters": {
+              "id": 884,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 883,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 919,
+                  "src": "881:5:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 882,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "881:5:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "880:7:9"
+            },
+            "scope": 966,
+            "src": "756:768:9",
+            "stateMutability": "view",
+            "superFunction": 12,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 956,
+              "nodeType": "Block",
+              "src": "1881:476:9",
+              "statements": [
+                {
+                  "condition": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    },
+                    "id": 928,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "id": 926,
+                      "name": "restrictionCode",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 921,
+                      "src": "1895:15:9",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "==",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "id": 927,
+                      "name": "SUCCESS_CODE",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 824,
+                      "src": "1914:12:9",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      }
+                    },
+                    "src": "1895:31:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": null,
+                  "id": 932,
+                  "nodeType": "IfStatement",
+                  "src": "1891:84:9",
+                  "trueBody": {
+                    "id": 931,
+                    "nodeType": "Block",
+                    "src": "1928:47:9",
+                    "statements": [
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 929,
+                          "name": "SUCCESS_MESSAGE",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 836,
+                          "src": "1949:15:9",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_string_memory",
+                            "typeString": "string memory"
+                          }
+                        },
+                        "functionReturnParameters": 925,
+                        "id": 930,
+                        "nodeType": "Return",
+                        "src": "1942:22:9"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "condition": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    },
+                    "id": 935,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "id": 933,
+                      "name": "restrictionCode",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 921,
+                      "src": "1989:15:9",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "==",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "id": 934,
+                      "name": "FAILURE_NON_WHITELIST",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 827,
+                      "src": "2008:21:9",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      }
+                    },
+                    "src": "1989:40:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": null,
+                  "id": 939,
+                  "nodeType": "IfStatement",
+                  "src": "1985:107:9",
+                  "trueBody": {
+                    "id": 938,
+                    "nodeType": "Block",
+                    "src": "2031:61:9",
+                    "statements": [
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 936,
+                          "name": "FAILURE_NON_WHITELIST_MESSAGE",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 839,
+                          "src": "2052:29:9",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_string_memory",
+                            "typeString": "string memory"
+                          }
+                        },
+                        "functionReturnParameters": 925,
+                        "id": 937,
+                        "nodeType": "Return",
+                        "src": "2045:36:9"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "condition": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    },
+                    "id": 942,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "id": 940,
+                      "name": "restrictionCode",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 921,
+                      "src": "2106:15:9",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "==",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "id": 941,
+                      "name": "FAILURE_TIMELOCK",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 830,
+                      "src": "2125:16:9",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      }
+                    },
+                    "src": "2106:35:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": null,
+                  "id": 946,
+                  "nodeType": "IfStatement",
+                  "src": "2102:97:9",
+                  "trueBody": {
+                    "id": 945,
+                    "nodeType": "Block",
+                    "src": "2143:56:9",
+                    "statements": [
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 943,
+                          "name": "FAILURE_TIMELOCK_MESSAGE",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 842,
+                          "src": "2164:24:9",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_string_memory",
+                            "typeString": "string memory"
+                          }
+                        },
+                        "functionReturnParameters": 925,
+                        "id": 944,
+                        "nodeType": "Return",
+                        "src": "2157:31:9"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "condition": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    },
+                    "id": 949,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "id": 947,
+                      "name": "restrictionCode",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 921,
+                      "src": "2213:15:9",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "==",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "id": 948,
+                      "name": "FAILURE_CONTRACT_PAUSED",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 833,
+                      "src": "2232:23:9",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      }
+                    },
+                    "src": "2213:42:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": null,
+                  "id": 953,
+                  "nodeType": "IfStatement",
+                  "src": "2209:111:9",
+                  "trueBody": {
+                    "id": 952,
+                    "nodeType": "Block",
+                    "src": "2257:63:9",
+                    "statements": [
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 950,
+                          "name": "FAILURE_CONTRACT_PAUSED_MESSAGE",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 845,
+                          "src": "2278:31:9",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_string_memory",
+                            "typeString": "string memory"
+                          }
+                        },
+                        "functionReturnParameters": 925,
+                        "id": 951,
+                        "nodeType": "Return",
+                        "src": "2271:38:9"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 954,
+                    "name": "UNKNOWN_ERROR",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 848,
+                    "src": "2337:13:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_memory",
+                      "typeString": "string memory"
+                    }
+                  },
+                  "functionReturnParameters": 925,
+                  "id": 955,
+                  "nodeType": "Return",
+                  "src": "2330:20:9"
+                }
+              ]
+            },
+            "documentation": "This function allows a wallet or other client to get a human readable string to show\na user if a transfer was restricted.  It should return enough information for the user\nto know why it failed.",
+            "id": 957,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "messageForTransferRestriction",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 922,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 921,
+                  "name": "restrictionCode",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 957,
+                  "src": "1792:21:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 920,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1792:5:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1791:23:9"
+            },
+            "returnParameters": {
+              "id": 925,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 924,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 957,
+                  "src": "1862:13:9",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 923,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1862:6:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1861:15:9"
+            },
+            "scope": 966,
+            "src": "1752:605:9",
+            "stateMutability": "view",
+            "superFunction": 19,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 964,
+              "nodeType": "Block",
+              "src": "2421:34:9",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 962,
+                    "name": "SUCCESS_CODE",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 824,
+                    "src": "2436:12:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "functionReturnParameters": 961,
+                  "id": 963,
+                  "nodeType": "Return",
+                  "src": "2429:19:9"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 965,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getSuccessCode",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 958,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2386:2:9"
+            },
+            "returnParameters": {
+              "id": 961,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 960,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 965,
+                  "src": "2412:7:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 959,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2412:7:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2411:9:9"
+            },
+            "scope": 966,
+            "src": "2363:92:9",
+            "stateMutability": "view",
+            "superFunction": 25,
+            "visibility": "external"
+          }
+        ],
+        "scope": 967,
+        "src": "245:2212:9"
+      }
+    ],
+    "src": "0:2457:9"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.8+commit.23d335f2.Emscripten.clang"
+  },
+  "networks": {
+    "4": {
+      "events": {},
+      "links": {},
+      "address": "0x9210714D90393c5af96B1c747751dDB60E9b6Cc1",
+      "transactionHash": "0xff84917dda10bbc80b939e5b86956be45e0f65d0ad88472a2f6d682e119988e8"
+    }
+  },
+  "schemaVersion": "3.0.16",
+  "updatedAt": "2020-03-03T20:02:27.163Z",
+  "devdoc": {
+    "details": "Defines the rules the validate transfers and the error messages",
+    "methods": {},
+    "title": "TransferRestrictions"
+  },
+  "userdoc": {
+    "methods": {
+      "constructor": "Constructor sets the address the validators contract which should be the token contract",
+      "detectTransferRestriction(address,address,uint256)": {
+        "notice": "This function detects whether a transfer should be restricted and not allowed. If the function returns SUCCESS_CODE (0) then it should be allowed."
+      },
+      "messageForTransferRestriction(uint8)": {
+        "notice": "This function allows a wallet or other client to get a human readable string to show a user if a transfer was restricted.  It should return enough information for the user to know why it failed."
+      }
+    }
+  }
+}

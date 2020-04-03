@@ -1,0 +1,6 @@
+{
+    "totalExchanges": 10,
+    "tokensPerExchange": 1000000,
+    "dollarsPerExchange": 500000,
+    "tradesPerSecond":116
+}

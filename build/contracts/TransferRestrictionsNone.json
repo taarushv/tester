@@ -1,0 +1,1338 @@
+{
+  "contractName": "TransferRestrictionsNone",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "SUCCESS_CODE",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "FAILURE_TIMELOCK_MESSAGE",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "FAILURE_NON_WHITELIST",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "FAILURE_TIMELOCK",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "FAILURE_CONTRACT_PAUSED_MESSAGE",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "FAILURE_CONTRACT_PAUSED",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "UNKNOWN_ERROR",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "FAILURE_NON_WHITELIST_MESSAGE",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "SUCCESS_MESSAGE",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "address"
+        },
+        {
+          "name": "",
+          "type": "address"
+        },
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "detectTransferRestriction",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "restrictionCode",
+          "type": "uint8"
+        }
+      ],
+      "name": "messageForTransferRestriction",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getSuccessCode",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.8+commit.23d335f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"SUCCESS_CODE\",\"outputs\":[{\"name\":\"\",\"type\":\"uint8\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"FAILURE_TIMELOCK_MESSAGE\",\"outputs\":[{\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"FAILURE_NON_WHITELIST\",\"outputs\":[{\"name\":\"\",\"type\":\"uint8\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"FAILURE_TIMELOCK\",\"outputs\":[{\"name\":\"\",\"type\":\"uint8\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"getSuccessCode\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"FAILURE_CONTRACT_PAUSED_MESSAGE\",\"outputs\":[{\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"restrictionCode\",\"type\":\"uint8\"}],\"name\":\"messageForTransferRestriction\",\"outputs\":[{\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"FAILURE_CONTRACT_PAUSED\",\"outputs\":[{\"name\":\"\",\"type\":\"uint8\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"UNKNOWN_ERROR\",\"outputs\":[{\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"FAILURE_NON_WHITELIST_MESSAGE\",\"outputs\":[{\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"\",\"type\":\"address\"},{\"name\":\"\",\"type\":\"address\"},{\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"detectTransferRestriction\",\"outputs\":[{\"name\":\"\",\"type\":\"uint8\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"SUCCESS_MESSAGE\",\"outputs\":[{\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"Defines no restrictions on transfers, any transfer is valid if this contract is used to validate     This essentially turns off all restrictions and allows transfers to behave like a standard ERC20\",\"methods\":{},\"title\":\"TransferRestrictionsNone\"},\"userdoc\":{\"methods\":{\"detectTransferRestriction(address,address,uint256)\":{\"notice\":\"This function detects whether a transfer should be restricted and not allowed. If the function returns SUCCESS_CODE (0) then it should be allowed.\"},\"messageForTransferRestriction(uint8)\":{\"notice\":\"This function allows a wallet or other client to get a human readable string to show a user if a transfer was restricted.  It should return enough information for the user to know why it failed.\"}}}},\"settings\":{\"compilationTarget\":{\"/Users/JohnDoe/Desktop/erc1404-simulator/presetupERC1404/contracts/restrictions/TransferRestrictionsNone.sol\":\"TransferRestrictionsNone\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/JohnDoe/Desktop/erc1404-simulator/presetupERC1404/contracts/1404/IERC1404.sol\":{\"keccak256\":\"0x9161f802112edd22fdcf61102d36d97ef0af064bfe8b44443f05ac7d4caacc4f\",\"urls\":[\"bzzr://ab539cb8d8fd42e2deaeca130ea5bf80661a18449ad2e88fc241dfc97cc741b7\"]},\"/Users/JohnDoe/Desktop/erc1404-simulator/presetupERC1404/contracts/1404/IERC1404Validators.sol\":{\"keccak256\":\"0xccb4bf917ef0c2e0473ece8d6e3fc2e313746ab073d306316490d9d879376c2c\",\"urls\":[\"bzzr://88d9039cfa208871eaa09741ecf20379f6e2da384290f701ecf6cb4af5c6bdb0\"]},\"/Users/JohnDoe/Desktop/erc1404-simulator/presetupERC1404/contracts/restrictions/RestrictionMessages.sol\":{\"keccak256\":\"0x5bfa80efb83648d2d7d8f20ff9544ba1fea48e6d54c4ff1dbd934b3d4e482645\",\"urls\":[\"bzzr://03181ff09f19dbb6deec0cdcb57a3a69fa499d87041b8c1095cb4df8da5aacb4\"]},\"/Users/JohnDoe/Desktop/erc1404-simulator/presetupERC1404/contracts/restrictions/TransferRestrictionsNone.sol\":{\"keccak256\":\"0xdfccd20a21a5949943246361c02a0b9a961f08a82b7e9d7414c1d81f7422a80b\",\"urls\":[\"bzzr://325c67ecc59a563ac14bbfd3f0c20dc4c187da419a7e01b1d92d29ddc7640b40\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5061077f806100206000396000f3fe608060405234801561001057600080fd5b50600436106100b45760003560e01c80637f4ab1dd116100715780637f4ab1dd1461024957806386a299fb146102f357806397af674414610317578063c89344621461039a578063d4ce14151461041d578063e7984d17146104a5576100b4565b80630e969a05146100b9578063191035ab146100dd5780631fb45ec0146101605780632ddabee8146101845780635ec64759146101a8578063777eb99f146101c6575b600080fd5b6100c1610528565b604051808260ff1660ff16815260200191505060405180910390f35b6100e561052d565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561012557808201518184015260208101905061010a565b50505050905090810190601f1680156101525780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b610168610549565b604051808260ff1660ff16815260200191505060405180910390f35b61018c61054e565b604051808260ff1660ff16815260200191505060405180910390f35b6101b0610553565b6040518082815260200191505060405180910390f35b6101ce61055e565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561020e5780820151818401526020810190506101f3565b50505050905090810190601f16801561023b5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b6102786004803603602081101561025f57600080fd5b81019080803560ff16906020019092919050505061057a565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156102b857808201518184015260208101905061029d565b50505050905090810190601f1680156102e55780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b6102fb610606565b604051808260ff1660ff16815260200191505060405180910390f35b61031f61060b565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561035f578082015181840152602081019050610344565b50505050905090810190601f16801561038c5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b6103a2610644565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156103e25780820151818401526020810190506103c7565b50505050905090810190601f16801561040f5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b6104896004803603606081101561043357600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190803573ffffffffffffffffffffffffffffffffffffffff16906020019092919080359060200190929190505050610660565b604051808260ff1660ff16815260200191505060405180910390f35b6104ad61066c565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156104ed5780820151818401526020810190506104d2565b50505050905090810190601f16801561051a5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b600081565b60405180606001604052806035815260200161071f6035913981565b600181565b600281565b60008060ff16905090565b6040518060600160405280603d81526020016106a6603d913981565b6060600060ff168260ff1614156105c8576040518060400160405280600781526020017f53554343455353000000000000000000000000000000000000000000000000008152509050610601565b6040518060400160405280601281526020017f556e6b6e6f776e204572726f7220436f6465000000000000000000000000000081525090505b919050565b600381565b6040518060400160405280601281526020017f556e6b6e6f776e204572726f7220436f6465000000000000000000000000000081525081565b6040518060600160405280603c81526020016106e3603c913981565b60008090509392505050565b6040518060400160405280600781526020017f53554343455353000000000000000000000000000000000000000000000000008152508156fe546865207472616e736665722077617320726573747269637465642064756520746f2074686520636f6e7472616374206265696e67207061757365642e546865207472616e736665722077617320726573747269637465642064756520746f207768697465206c69737420636f6e66696775726174696f6e2e546865207472616e736665722077617320726573747269637465642064756520746f2074696d656c6f636b656420746f6b656e732ea165627a7a723058206974af8ce5d84a275013a0cd80dcb256ca7cd78ce75ea9c4ca7b56625c53521a0029",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100b45760003560e01c80637f4ab1dd116100715780637f4ab1dd1461024957806386a299fb146102f357806397af674414610317578063c89344621461039a578063d4ce14151461041d578063e7984d17146104a5576100b4565b80630e969a05146100b9578063191035ab146100dd5780631fb45ec0146101605780632ddabee8146101845780635ec64759146101a8578063777eb99f146101c6575b600080fd5b6100c1610528565b604051808260ff1660ff16815260200191505060405180910390f35b6100e561052d565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561012557808201518184015260208101905061010a565b50505050905090810190601f1680156101525780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b610168610549565b604051808260ff1660ff16815260200191505060405180910390f35b61018c61054e565b604051808260ff1660ff16815260200191505060405180910390f35b6101b0610553565b6040518082815260200191505060405180910390f35b6101ce61055e565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561020e5780820151818401526020810190506101f3565b50505050905090810190601f16801561023b5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b6102786004803603602081101561025f57600080fd5b81019080803560ff16906020019092919050505061057a565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156102b857808201518184015260208101905061029d565b50505050905090810190601f1680156102e55780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b6102fb610606565b604051808260ff1660ff16815260200191505060405180910390f35b61031f61060b565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561035f578082015181840152602081019050610344565b50505050905090810190601f16801561038c5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b6103a2610644565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156103e25780820151818401526020810190506103c7565b50505050905090810190601f16801561040f5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b6104896004803603606081101561043357600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190803573ffffffffffffffffffffffffffffffffffffffff16906020019092919080359060200190929190505050610660565b604051808260ff1660ff16815260200191505060405180910390f35b6104ad61066c565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156104ed5780820151818401526020810190506104d2565b50505050905090810190601f16801561051a5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b600081565b60405180606001604052806035815260200161071f6035913981565b600181565b600281565b60008060ff16905090565b6040518060600160405280603d81526020016106a6603d913981565b6060600060ff168260ff1614156105c8576040518060400160405280600781526020017f53554343455353000000000000000000000000000000000000000000000000008152509050610601565b6040518060400160405280601281526020017f556e6b6e6f776e204572726f7220436f6465000000000000000000000000000081525090505b919050565b600381565b6040518060400160405280601281526020017f556e6b6e6f776e204572726f7220436f6465000000000000000000000000000081525081565b6040518060600160405280603c81526020016106e3603c913981565b60008090509392505050565b6040518060400160405280600781526020017f53554343455353000000000000000000000000000000000000000000000000008152508156fe546865207472616e736665722077617320726573747269637465642064756520746f2074686520636f6e7472616374206265696e67207061757365642e546865207472616e736665722077617320726573747269637465642064756520746f207768697465206c69737420636f6e66696775726174696f6e2e546865207472616e736665722077617320726573747269637465642064756520746f2074696d656c6f636b656420746f6b656e732ea165627a7a723058206974af8ce5d84a275013a0cd80dcb256ca7cd78ce75ea9c4ca7b56625c53521a0029",
+  "sourceMap": "386:1006:10:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;386:1006:10;;;;;;;",
+  "deployedSourceMap": "386:1006:10:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;386:1006:10;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;99:38:8;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;479:105;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;479:105:8;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;143:47;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;196:42;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;1298:92:10;;;:::i;:::-;;;;;;;;;;;;;;;;;;;590:120:8;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;590:120:8;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1032:260:10;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;1032:260:10;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;1032:260:10;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;244:49:8;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;716:59;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;716:59:8;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;356:117;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;356:117:8;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;647:157:10;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;647:157:10;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;300:50:8;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;300:50:8;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;99:38;136:1;99:38;:::o;479:105::-;;;;;;;;;;;;;;;;;;;:::o;143:47::-;189:1;143:47;:::o;196:42::-;237:1;196:42;:::o;1298:92:10:-;1347:7;136:1:8;1364:19:10;;;;1298:92;:::o;590:120:8:-;;;;;;;;;;;;;;;;;;;:::o;1032:260:10:-;1142:13;136:1:8;1175:31:10;;:15;:31;;;1171:84;;;1229:15;;;;;;;;;;;;;;;;;1222:22;;;;1171:84;1272:13;;;;;;;;;;;;;;;;;1265:20;;1032:260;;;;:::o;244:49:8:-;292:1;244:49;:::o;716:59::-;;;;;;;;;;;;;;;;;;;:::o;356:117::-;;;;;;;;;;;;;;;;;;;:::o;647:157:10:-;757:5;136:1:8;778:19:10;;647:157;;;;;:::o;300:50:8:-;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity 0.5.8;\n\nimport \"../1404/IERC1404.sol\";\nimport \"../1404/IERC1404Validators.sol\";\nimport \"./RestrictionMessages.sol\";\n\n/**\n * @title TransferRestrictionsNone\n * @dev Defines no restrictions on transfers, any transfer is valid if this contract is used to validate\n *      This essentially turns off all restrictions and allows transfers to behave like a standard ERC20\n */\ncontract TransferRestrictionsNone is IERC1404, RestrictionMessages, IERC1404Success {\n\n    /**\n    This function detects whether a transfer should be restricted and not allowed.\n    If the function returns SUCCESS_CODE (0) then it should be allowed.\n    */\n    function detectTransferRestriction (address, address, uint256)\n        external\n        view\n        returns (uint8)\n    {\n        return SUCCESS_CODE;\n    }\n\n    /**\n    This function allows a wallet or other client to get a human readable string to show\n    a user if a transfer was restricted.  It should return enough information for the user\n    to know why it failed.\n    */\n    function messageForTransferRestriction (uint8 restrictionCode)\n        external\n        view\n        returns (string memory)\n    {\n        if (restrictionCode == SUCCESS_CODE) {\n            return SUCCESS_MESSAGE;\n        }\n\n        return UNKNOWN_ERROR;\n    }\n\n    function getSuccessCode() external view returns (uint256) {\n      return SUCCESS_CODE;\n    }\n}",
+  "sourcePath": "/Users/JohnDoe/Desktop/erc1404-simulator/presetupERC1404/contracts/restrictions/TransferRestrictionsNone.sol",
+  "ast": {
+    "absolutePath": "/Users/JohnDoe/Desktop/erc1404-simulator/presetupERC1404/contracts/restrictions/TransferRestrictionsNone.sol",
+    "exportedSymbols": {
+      "TransferRestrictionsNone": [
+        1017
+      ]
+    },
+    "id": 1018,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 968,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".8"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:10"
+      },
+      {
+        "absolutePath": "/Users/JohnDoe/Desktop/erc1404-simulator/presetupERC1404/contracts/1404/IERC1404.sol",
+        "file": "../1404/IERC1404.sol",
+        "id": 969,
+        "nodeType": "ImportDirective",
+        "scope": 1018,
+        "sourceUnit": 32,
+        "src": "24:30:10",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/JohnDoe/Desktop/erc1404-simulator/presetupERC1404/contracts/1404/IERC1404Validators.sol",
+        "file": "../1404/IERC1404Validators.sol",
+        "id": 970,
+        "nodeType": "ImportDirective",
+        "scope": 1018,
+        "sourceUnit": 67,
+        "src": "55:40:10",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/JohnDoe/Desktop/erc1404-simulator/presetupERC1404/contracts/restrictions/RestrictionMessages.sol",
+        "file": "./RestrictionMessages.sol",
+        "id": 971,
+        "nodeType": "ImportDirective",
+        "scope": 1018,
+        "sourceUnit": 850,
+        "src": "96:35:10",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 972,
+              "name": "IERC1404",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 20,
+              "src": "423:8:10",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_IERC1404_$20",
+                "typeString": "contract IERC1404"
+              }
+            },
+            "id": 973,
+            "nodeType": "InheritanceSpecifier",
+            "src": "423:8:10"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 974,
+              "name": "RestrictionMessages",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 849,
+              "src": "433:19:10",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_RestrictionMessages_$849",
+                "typeString": "contract RestrictionMessages"
+              }
+            },
+            "id": 975,
+            "nodeType": "InheritanceSpecifier",
+            "src": "433:19:10"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 976,
+              "name": "IERC1404Success",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 31,
+              "src": "454:15:10",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_IERC1404Success_$31",
+                "typeString": "contract IERC1404Success"
+              }
+            },
+            "id": 977,
+            "nodeType": "InheritanceSpecifier",
+            "src": "454:15:10"
+          }
+        ],
+        "contractDependencies": [
+          20,
+          26,
+          31,
+          849
+        ],
+        "contractKind": "contract",
+        "documentation": "@title TransferRestrictionsNone\n@dev Defines no restrictions on transfers, any transfer is valid if this contract is used to validate\n     This essentially turns off all restrictions and allows transfers to behave like a standard ERC20",
+        "fullyImplemented": true,
+        "id": 1017,
+        "linearizedBaseContracts": [
+          1017,
+          31,
+          849,
+          20,
+          26
+        ],
+        "name": "TransferRestrictionsNone",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 990,
+              "nodeType": "Block",
+              "src": "768:36:10",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 988,
+                    "name": "SUCCESS_CODE",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 824,
+                    "src": "785:12:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "functionReturnParameters": 987,
+                  "id": 989,
+                  "nodeType": "Return",
+                  "src": "778:19:10"
+                }
+              ]
+            },
+            "documentation": "This function detects whether a transfer should be restricted and not allowed.\nIf the function returns SUCCESS_CODE (0) then it should be allowed.",
+            "id": 991,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "detectTransferRestriction",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 984,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 979,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 991,
+                  "src": "683:7:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 978,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "683:7:10",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 981,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 991,
+                  "src": "692:7:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 980,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "692:7:10",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 983,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 991,
+                  "src": "701:7:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 982,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "701:7:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "682:27:10"
+            },
+            "returnParameters": {
+              "id": 987,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 986,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 991,
+                  "src": "757:5:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 985,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "757:5:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "756:7:10"
+            },
+            "scope": 1017,
+            "src": "647:157:10",
+            "stateMutability": "view",
+            "superFunction": 12,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 1007,
+              "nodeType": "Block",
+              "src": "1161:131:10",
+              "statements": [
+                {
+                  "condition": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    },
+                    "id": 1000,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "id": 998,
+                      "name": "restrictionCode",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 993,
+                      "src": "1175:15:10",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "==",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "id": 999,
+                      "name": "SUCCESS_CODE",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 824,
+                      "src": "1194:12:10",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      }
+                    },
+                    "src": "1175:31:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": null,
+                  "id": 1004,
+                  "nodeType": "IfStatement",
+                  "src": "1171:84:10",
+                  "trueBody": {
+                    "id": 1003,
+                    "nodeType": "Block",
+                    "src": "1208:47:10",
+                    "statements": [
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 1001,
+                          "name": "SUCCESS_MESSAGE",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 836,
+                          "src": "1229:15:10",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_string_memory",
+                            "typeString": "string memory"
+                          }
+                        },
+                        "functionReturnParameters": 997,
+                        "id": 1002,
+                        "nodeType": "Return",
+                        "src": "1222:22:10"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 1005,
+                    "name": "UNKNOWN_ERROR",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 848,
+                    "src": "1272:13:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_memory",
+                      "typeString": "string memory"
+                    }
+                  },
+                  "functionReturnParameters": 997,
+                  "id": 1006,
+                  "nodeType": "Return",
+                  "src": "1265:20:10"
+                }
+              ]
+            },
+            "documentation": "This function allows a wallet or other client to get a human readable string to show\na user if a transfer was restricted.  It should return enough information for the user\nto know why it failed.",
+            "id": 1008,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "messageForTransferRestriction",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 994,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 993,
+                  "name": "restrictionCode",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1008,
+                  "src": "1072:21:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 992,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1072:5:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1071:23:10"
+            },
+            "returnParameters": {
+              "id": 997,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 996,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1008,
+                  "src": "1142:13:10",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 995,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1142:6:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1141:15:10"
+            },
+            "scope": 1017,
+            "src": "1032:260:10",
+            "stateMutability": "view",
+            "superFunction": 19,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 1015,
+              "nodeType": "Block",
+              "src": "1356:34:10",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 1013,
+                    "name": "SUCCESS_CODE",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 824,
+                    "src": "1371:12:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "functionReturnParameters": 1012,
+                  "id": 1014,
+                  "nodeType": "Return",
+                  "src": "1364:19:10"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1016,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getSuccessCode",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1009,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1321:2:10"
+            },
+            "returnParameters": {
+              "id": 1012,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1011,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1016,
+                  "src": "1347:7:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1010,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1347:7:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1346:9:10"
+            },
+            "scope": 1017,
+            "src": "1298:92:10",
+            "stateMutability": "view",
+            "superFunction": 25,
+            "visibility": "external"
+          }
+        ],
+        "scope": 1018,
+        "src": "386:1006:10"
+      }
+    ],
+    "src": "0:1392:10"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/JohnDoe/Desktop/erc1404-simulator/presetupERC1404/contracts/restrictions/TransferRestrictionsNone.sol",
+    "exportedSymbols": {
+      "TransferRestrictionsNone": [
+        1017
+      ]
+    },
+    "id": 1018,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 968,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".8"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:10"
+      },
+      {
+        "absolutePath": "/Users/JohnDoe/Desktop/erc1404-simulator/presetupERC1404/contracts/1404/IERC1404.sol",
+        "file": "../1404/IERC1404.sol",
+        "id": 969,
+        "nodeType": "ImportDirective",
+        "scope": 1018,
+        "sourceUnit": 32,
+        "src": "24:30:10",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/JohnDoe/Desktop/erc1404-simulator/presetupERC1404/contracts/1404/IERC1404Validators.sol",
+        "file": "../1404/IERC1404Validators.sol",
+        "id": 970,
+        "nodeType": "ImportDirective",
+        "scope": 1018,
+        "sourceUnit": 67,
+        "src": "55:40:10",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/JohnDoe/Desktop/erc1404-simulator/presetupERC1404/contracts/restrictions/RestrictionMessages.sol",
+        "file": "./RestrictionMessages.sol",
+        "id": 971,
+        "nodeType": "ImportDirective",
+        "scope": 1018,
+        "sourceUnit": 850,
+        "src": "96:35:10",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 972,
+              "name": "IERC1404",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 20,
+              "src": "423:8:10",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_IERC1404_$20",
+                "typeString": "contract IERC1404"
+              }
+            },
+            "id": 973,
+            "nodeType": "InheritanceSpecifier",
+            "src": "423:8:10"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 974,
+              "name": "RestrictionMessages",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 849,
+              "src": "433:19:10",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_RestrictionMessages_$849",
+                "typeString": "contract RestrictionMessages"
+              }
+            },
+            "id": 975,
+            "nodeType": "InheritanceSpecifier",
+            "src": "433:19:10"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 976,
+              "name": "IERC1404Success",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 31,
+              "src": "454:15:10",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_IERC1404Success_$31",
+                "typeString": "contract IERC1404Success"
+              }
+            },
+            "id": 977,
+            "nodeType": "InheritanceSpecifier",
+            "src": "454:15:10"
+          }
+        ],
+        "contractDependencies": [
+          20,
+          26,
+          31,
+          849
+        ],
+        "contractKind": "contract",
+        "documentation": "@title TransferRestrictionsNone\n@dev Defines no restrictions on transfers, any transfer is valid if this contract is used to validate\n     This essentially turns off all restrictions and allows transfers to behave like a standard ERC20",
+        "fullyImplemented": true,
+        "id": 1017,
+        "linearizedBaseContracts": [
+          1017,
+          31,
+          849,
+          20,
+          26
+        ],
+        "name": "TransferRestrictionsNone",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 990,
+              "nodeType": "Block",
+              "src": "768:36:10",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 988,
+                    "name": "SUCCESS_CODE",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 824,
+                    "src": "785:12:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "functionReturnParameters": 987,
+                  "id": 989,
+                  "nodeType": "Return",
+                  "src": "778:19:10"
+                }
+              ]
+            },
+            "documentation": "This function detects whether a transfer should be restricted and not allowed.\nIf the function returns SUCCESS_CODE (0) then it should be allowed.",
+            "id": 991,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "detectTransferRestriction",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 984,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 979,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 991,
+                  "src": "683:7:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 978,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "683:7:10",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 981,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 991,
+                  "src": "692:7:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 980,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "692:7:10",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 983,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 991,
+                  "src": "701:7:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 982,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "701:7:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "682:27:10"
+            },
+            "returnParameters": {
+              "id": 987,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 986,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 991,
+                  "src": "757:5:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 985,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "757:5:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "756:7:10"
+            },
+            "scope": 1017,
+            "src": "647:157:10",
+            "stateMutability": "view",
+            "superFunction": 12,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 1007,
+              "nodeType": "Block",
+              "src": "1161:131:10",
+              "statements": [
+                {
+                  "condition": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    },
+                    "id": 1000,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "id": 998,
+                      "name": "restrictionCode",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 993,
+                      "src": "1175:15:10",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "==",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "id": 999,
+                      "name": "SUCCESS_CODE",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 824,
+                      "src": "1194:12:10",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      }
+                    },
+                    "src": "1175:31:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": null,
+                  "id": 1004,
+                  "nodeType": "IfStatement",
+                  "src": "1171:84:10",
+                  "trueBody": {
+                    "id": 1003,
+                    "nodeType": "Block",
+                    "src": "1208:47:10",
+                    "statements": [
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 1001,
+                          "name": "SUCCESS_MESSAGE",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 836,
+                          "src": "1229:15:10",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_string_memory",
+                            "typeString": "string memory"
+                          }
+                        },
+                        "functionReturnParameters": 997,
+                        "id": 1002,
+                        "nodeType": "Return",
+                        "src": "1222:22:10"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 1005,
+                    "name": "UNKNOWN_ERROR",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 848,
+                    "src": "1272:13:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_memory",
+                      "typeString": "string memory"
+                    }
+                  },
+                  "functionReturnParameters": 997,
+                  "id": 1006,
+                  "nodeType": "Return",
+                  "src": "1265:20:10"
+                }
+              ]
+            },
+            "documentation": "This function allows a wallet or other client to get a human readable string to show\na user if a transfer was restricted.  It should return enough information for the user\nto know why it failed.",
+            "id": 1008,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "messageForTransferRestriction",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 994,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 993,
+                  "name": "restrictionCode",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1008,
+                  "src": "1072:21:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 992,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1072:5:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1071:23:10"
+            },
+            "returnParameters": {
+              "id": 997,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 996,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1008,
+                  "src": "1142:13:10",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 995,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1142:6:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1141:15:10"
+            },
+            "scope": 1017,
+            "src": "1032:260:10",
+            "stateMutability": "view",
+            "superFunction": 19,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 1015,
+              "nodeType": "Block",
+              "src": "1356:34:10",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 1013,
+                    "name": "SUCCESS_CODE",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 824,
+                    "src": "1371:12:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "functionReturnParameters": 1012,
+                  "id": 1014,
+                  "nodeType": "Return",
+                  "src": "1364:19:10"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1016,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getSuccessCode",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1009,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1321:2:10"
+            },
+            "returnParameters": {
+              "id": 1012,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1011,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1016,
+                  "src": "1347:7:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1010,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1347:7:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1346:9:10"
+            },
+            "scope": 1017,
+            "src": "1298:92:10",
+            "stateMutability": "view",
+            "superFunction": 25,
+            "visibility": "external"
+          }
+        ],
+        "scope": 1018,
+        "src": "386:1006:10"
+      }
+    ],
+    "src": "0:1392:10"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.8+commit.23d335f2.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.20",
+  "updatedAt": "2020-03-03T12:32:02.203Z",
+  "devdoc": {
+    "details": "Defines no restrictions on transfers, any transfer is valid if this contract is used to validate     This essentially turns off all restrictions and allows transfers to behave like a standard ERC20",
+    "methods": {},
+    "title": "TransferRestrictionsNone"
+  },
+  "userdoc": {
+    "methods": {
+      "detectTransferRestriction(address,address,uint256)": {
+        "notice": "This function detects whether a transfer should be restricted and not allowed. If the function returns SUCCESS_CODE (0) then it should be allowed."
+      },
+      "messageForTransferRestriction(uint8)": {
+        "notice": "This function allows a wallet or other client to get a human readable string to show a user if a transfer was restricted.  It should return enough information for the user to know why it failed."
+      }
+    }
+  }
+}

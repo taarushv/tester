@@ -1,0 +1,2814 @@
+{
+  "contractName": "Whitelistable",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "removeOwner",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "isOwner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "addOwner",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "isWhitelister",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "removeWhitelister",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "whitelist",
+      "outputs": [
+        {
+          "name": "status",
+          "type": "bool"
+        },
+        {
+          "name": "data",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "addWhitelister",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "_address",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "status",
+          "type": "bool"
+        },
+        {
+          "indexed": false,
+          "name": "data",
+          "type": "string"
+        }
+      ],
+      "name": "WhitelistUpdate",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "addedWhitelister",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "addedBy",
+          "type": "address"
+        }
+      ],
+      "name": "WhitelisterAdded",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "removedWhitelister",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "removedBy",
+          "type": "address"
+        }
+      ],
+      "name": "WhitelisterRemoved",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "addedOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "addedBy",
+          "type": "address"
+        }
+      ],
+      "name": "OwnerAdded",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "removedOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "removedBy",
+          "type": "address"
+        }
+      ],
+      "name": "OwnerRemoved",
+      "type": "event"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "name": "status",
+          "type": "bool"
+        },
+        {
+          "name": "data",
+          "type": "string"
+        }
+      ],
+      "name": "setWhitelist",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_address",
+          "type": "address"
+        }
+      ],
+      "name": "getWhitelistStatus",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_address",
+          "type": "address"
+        }
+      ],
+      "name": "getWhitelistData",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "from",
+          "type": "address"
+        },
+        {
+          "name": "to",
+          "type": "address"
+        }
+      ],
+      "name": "checkWhitelists",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.8+commit.23d335f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"name\":\"account\",\"type\":\"address\"}],\"name\":\"removeOwner\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"to\",\"type\":\"address\"},{\"name\":\"status\",\"type\":\"bool\"},{\"name\":\"data\",\"type\":\"string\"}],\"name\":\"setWhitelist\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"account\",\"type\":\"address\"}],\"name\":\"isOwner\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"_address\",\"type\":\"address\"}],\"name\":\"getWhitelistData\",\"outputs\":[{\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"account\",\"type\":\"address\"}],\"name\":\"addOwner\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"account\",\"type\":\"address\"}],\"name\":\"isWhitelister\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"account\",\"type\":\"address\"}],\"name\":\"removeWhitelister\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"from\",\"type\":\"address\"},{\"name\":\"to\",\"type\":\"address\"}],\"name\":\"checkWhitelists\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"\",\"type\":\"address\"}],\"name\":\"whitelist\",\"outputs\":[{\"name\":\"status\",\"type\":\"bool\"},{\"name\":\"data\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"_address\",\"type\":\"address\"}],\"name\":\"getWhitelistStatus\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"account\",\"type\":\"address\"}],\"name\":\"addWhitelister\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"_address\",\"type\":\"address\"},{\"indexed\":false,\"name\":\"status\",\"type\":\"bool\"},{\"indexed\":false,\"name\":\"data\",\"type\":\"string\"}],\"name\":\"WhitelistUpdate\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"name\":\"addedWhitelister\",\"type\":\"address\"},{\"indexed\":true,\"name\":\"addedBy\",\"type\":\"address\"}],\"name\":\"WhitelisterAdded\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"name\":\"removedWhitelister\",\"type\":\"address\"},{\"indexed\":true,\"name\":\"removedBy\",\"type\":\"address\"}],\"name\":\"WhitelisterRemoved\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"name\":\"addedOwner\",\"type\":\"address\"},{\"indexed\":true,\"name\":\"addedBy\",\"type\":\"address\"}],\"name\":\"OwnerAdded\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"name\":\"removedOwner\",\"type\":\"address\"},{\"indexed\":true,\"name\":\"removedBy\",\"type\":\"address\"}],\"name\":\"OwnerRemoved\",\"type\":\"event\"}],\"devdoc\":{\"details\":\"Allows tracking whether addressess are allowed to hold tokens.\",\"methods\":{\"checkWhitelists(address,address)\":{\"details\":\"Determine if sender and receiver are whitelisted, return true if both accounts are whitelisted\",\"params\":{\"from\":\"The address sending tokens.\",\"to\":\"The address receiving tokens.\"}},\"getWhitelistData(address)\":{\"details\":\"Get the data of and address in the whitelist\",\"params\":{\"_address\":\"the address to retrieve the data from\"}},\"getWhitelistStatus(address)\":{\"details\":\"Get the status of the whitelist\",\"params\":{\"_address\":\"the address to be check\"}},\"setWhitelist(address,bool,string)\":{\"details\":\"Set a white list address\",\"params\":{\"data\":\"a string with data about the whitelisted address\",\"status\":\"the whitelisting status (true for yes, false for no)\",\"to\":\"the address to be set\"}}},\"title\":\"Whitelistable\"},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/JohnDoe/Desktop/erc1404-simulator/presetupERC1404/contracts/capabilities/Whitelistable.sol\":\"Whitelistable\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/JohnDoe/Desktop/erc1404-simulator/presetupERC1404/contracts/capabilities/Whitelistable.sol\":{\"keccak256\":\"0xda44c2698aabee8f15f4ac99cb6457e0e99d595061d51accdc836c5eaa578fb1\",\"urls\":[\"bzzr://1b616884226d50ad4e524ae711ca6ff354a30de5c0c421f2227e3cb6f8ef393a\"]},\"/Users/JohnDoe/Desktop/erc1404-simulator/presetupERC1404/contracts/roles/OwnerRole.sol\":{\"keccak256\":\"0xfcc1f22977c9431a345bb73e20f7aeadb7b3f27c31cc67fc800deb2b707b0190\",\"urls\":[\"bzzr://87b732aee459203860b5d982381be0e2fb9596dfca3013b3f8ec0042656a13b8\"]},\"/Users/JohnDoe/Desktop/erc1404-simulator/presetupERC1404/contracts/roles/WhitelisterRole.sol\":{\"keccak256\":\"0xe4acb86270483c0780c978cc70f4c1fdf5aa8ad9f09f3e63f048cfa3ece17c78\",\"urls\":[\"bzzr://2dc38ff80ac9e5497150d1ac676e0a7d6fc60ddc17e7803f21746b60550e2bb6\"]},\"@openzeppelin/contracts/access/Roles.sol\":{\"keccak256\":\"0xb002c378d7b82a101bd659c341518953ca0919d342c0a400196982c0e7e7bcdb\",\"urls\":[\"bzzr://bd34c1ce05b5b2b3a62fc02e160f6805b1cadd476854664f433c685b2fda8dad\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506112ac806100206000396000f3fe608060405234801561001057600080fd5b50600436106100a95760003560e01c80637d0c269f116100715780637d0c269f1461034e57806382c3f79c146103aa57806399da091d146103ee5780639b19251a1461046a578063d9ba32fc14610532578063eaf9144a1461058e576100a9565b8063173825d9146100ae57806327ac1975146100f25780632f54bf6e146101f157806368aa98131461024d5780637065cb481461030a575b600080fd5b6100f0600480360360208110156100c457600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506105d2565b005b6101d76004803603606081101561010857600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291908035151590602001909291908035906020019064010000000081111561015157600080fd5b82018360208201111561016357600080fd5b8035906020019184600183028401116401000000008311171561018557600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f8201169050808301925050505050505091929192905050506106c1565b604051808215151515815260200191505060405180910390f35b6102336004803603602081101561020757600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff16906020019092919050505061089e565b604051808215151515815260200191505060405180910390f35b61028f6004803603602081101561026357600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506108bb565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156102cf5780820151818401526020810190506102b4565b50505050905090810190601f1680156102fc5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b61034c6004803603602081101561032057600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff16906020019092919050505061099f565b005b6103906004803603602081101561036457600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610a09565b604051808215151515815260200191505060405180910390f35b6103ec600480360360208110156103c057600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610a26565b005b6104506004803603604081101561040457600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610a90565b604051808215151515815260200191505060405180910390f35b6104ac6004803603602081101561048057600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610b42565b604051808315151515815260200180602001828103825283818151815260200191508051906020019080838360005b838110156104f65780820151818401526020810190506104db565b50505050905090810190601f1680156105235780820380516001836020036101000a031916815260200191505b50935050505060405180910390f35b6105746004803603602081101561054857600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610c0b565b604051808215151515815260200191505060405180910390f35b6105d0600480360360208110156105a457600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610c64565b005b6105db3361089e565b610630576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252602e8152602001806111ae602e913960400191505060405180910390fd5b8073ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614156106b5576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252602881526020018061121f6028913960400191505060405180910390fd5b6106be81610cce565b50565b60006106cc33610a09565b610721576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252603a815260200180611247603a913960400191505060405180910390fd5b6040518060400160405280841515815260200183815250600260008673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060008201518160000160006101000a81548160ff02191690831515021790555060208201518160010190805190602001906107b3929190611108565b509050507f461193ae6c23672174f7a3ea35649aacdc857bfcae58cd12d61ea432c05bcbd5848484604051808473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018315151515815260200180602001828103825283818151815260200191508051906020019080838360005b8381101561085757808201518184015260208101905061083c565b50505050905090810190601f1680156108845780820380516001836020036101000a031916815260200191505b5094505050505060405180910390a1600190509392505050565b60006108b4826000610d3f90919063ffffffff16565b9050919050565b6060600260008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206001018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156109935780601f1061096857610100808354040283529160200191610993565b820191906000526020600020905b81548152906001019060200180831161097657829003601f168201915b50505050509050919050565b6109a83361089e565b6109fd576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252602e8152602001806111ae602e913960400191505060405180910390fd5b610a0681610e1d565b50565b6000610a1f826001610d3f90919063ffffffff16565b9050919050565b610a2f3361089e565b610a84576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252602e8152602001806111ae602e913960400191505060405180910390fd5b610a8d81610e8e565b50565b6000600260008473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060000160009054906101000a900460ff168015610b3a5750600260008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060000160009054906101000a900460ff165b905092915050565b60026020528060005260406000206000915090508060000160009054906101000a900460ff1690806001018054600181600116156101000203166002900480601f016020809104026020016040519081016040528092919081815260200182805460018160011615610100020316600290048015610c015780601f10610bd657610100808354040283529160200191610c01565b820191906000526020600020905b815481529060010190602001808311610be457829003601f168201915b5050505050905082565b6000600260008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060000160009054906101000a900460ff169050919050565b610c6d3361089e565b610cc2576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252602e8152602001806111ae602e913960400191505060405180910390fd5b610ccb81610eff565b50565b610ce2816000610f7090919063ffffffff16565b3373ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff167fe594d081b4382713733fe631966432c9cea5199afb2db5c3c1931f9f9300367960405160405180910390a350565b60008073ffffffffffffffffffffffffffffffffffffffff168273ffffffffffffffffffffffffffffffffffffffff161415610dc6576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260228152602001806111fd6022913960400191505060405180910390fd5b8260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060009054906101000a900460ff16905092915050565b610e3181600061102d90919063ffffffff16565b3373ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff167fc82bdbbf677a2462f2a7e22e4ba9abd209496b69cd7b868b3b1d28f76e09a40a60405160405180910390a350565b610ea2816001610f7090919063ffffffff16565b3373ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff167f3ed21605dd544629fb45f2ccaedcc095ba1dbea540fb6eaf5493a7479856b0be60405160405180910390a350565b610f1381600161102d90919063ffffffff16565b3373ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff167f5f36f4f5999f34947706fca376b955319b858573bf9d6bc59303c9a4cd80ced060405160405180910390a350565b610f7a8282610d3f565b610fcf576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260218152602001806111dc6021913960400191505060405180910390fd5b60008260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff0219169083151502179055505050565b6110378282610d3f565b156110aa576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252601f8152602001807f526f6c65733a206163636f756e7420616c72656164792068617320726f6c650081525060200191505060405180910390fd5b60018260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff0219169083151502179055505050565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061114957805160ff1916838001178555611177565b82800160010185558215611177579182015b8281111561117657825182559160200191906001019061115b565b5b5090506111849190611188565b5090565b6111aa91905b808211156111a657600081600090555060010161118e565b5090565b9056fe4f776e6572526f6c653a2063616c6c657220646f6573206e6f74206861766520746865204f776e657220726f6c65526f6c65733a206163636f756e7420646f6573206e6f74206861766520726f6c65526f6c65733a206163636f756e7420697320746865207a65726f20616464726573734f776e6572732063616e6e6f742072656d6f7665207468656d73656c766573206173206f776e657257686974656c6973746572526f6c653a2063616c6c657220646f6573206e6f742068617665207468652057686974656c697374657220726f6c65a165627a7a723058205e7b10434de6e2b6325080c3348211d02f4dec2bf542054bf0103b792f6597610029",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100a95760003560e01c80637d0c269f116100715780637d0c269f1461034e57806382c3f79c146103aa57806399da091d146103ee5780639b19251a1461046a578063d9ba32fc14610532578063eaf9144a1461058e576100a9565b8063173825d9146100ae57806327ac1975146100f25780632f54bf6e146101f157806368aa98131461024d5780637065cb481461030a575b600080fd5b6100f0600480360360208110156100c457600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506105d2565b005b6101d76004803603606081101561010857600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291908035151590602001909291908035906020019064010000000081111561015157600080fd5b82018360208201111561016357600080fd5b8035906020019184600183028401116401000000008311171561018557600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f8201169050808301925050505050505091929192905050506106c1565b604051808215151515815260200191505060405180910390f35b6102336004803603602081101561020757600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff16906020019092919050505061089e565b604051808215151515815260200191505060405180910390f35b61028f6004803603602081101561026357600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506108bb565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156102cf5780820151818401526020810190506102b4565b50505050905090810190601f1680156102fc5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b61034c6004803603602081101561032057600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff16906020019092919050505061099f565b005b6103906004803603602081101561036457600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610a09565b604051808215151515815260200191505060405180910390f35b6103ec600480360360208110156103c057600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610a26565b005b6104506004803603604081101561040457600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610a90565b604051808215151515815260200191505060405180910390f35b6104ac6004803603602081101561048057600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610b42565b604051808315151515815260200180602001828103825283818151815260200191508051906020019080838360005b838110156104f65780820151818401526020810190506104db565b50505050905090810190601f1680156105235780820380516001836020036101000a031916815260200191505b50935050505060405180910390f35b6105746004803603602081101561054857600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610c0b565b604051808215151515815260200191505060405180910390f35b6105d0600480360360208110156105a457600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610c64565b005b6105db3361089e565b610630576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252602e8152602001806111ae602e913960400191505060405180910390fd5b8073ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614156106b5576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252602881526020018061121f6028913960400191505060405180910390fd5b6106be81610cce565b50565b60006106cc33610a09565b610721576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252603a815260200180611247603a913960400191505060405180910390fd5b6040518060400160405280841515815260200183815250600260008673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060008201518160000160006101000a81548160ff02191690831515021790555060208201518160010190805190602001906107b3929190611108565b509050507f461193ae6c23672174f7a3ea35649aacdc857bfcae58cd12d61ea432c05bcbd5848484604051808473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018315151515815260200180602001828103825283818151815260200191508051906020019080838360005b8381101561085757808201518184015260208101905061083c565b50505050905090810190601f1680156108845780820380516001836020036101000a031916815260200191505b5094505050505060405180910390a1600190509392505050565b60006108b4826000610d3f90919063ffffffff16565b9050919050565b6060600260008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206001018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156109935780601f1061096857610100808354040283529160200191610993565b820191906000526020600020905b81548152906001019060200180831161097657829003601f168201915b50505050509050919050565b6109a83361089e565b6109fd576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252602e8152602001806111ae602e913960400191505060405180910390fd5b610a0681610e1d565b50565b6000610a1f826001610d3f90919063ffffffff16565b9050919050565b610a2f3361089e565b610a84576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252602e8152602001806111ae602e913960400191505060405180910390fd5b610a8d81610e8e565b50565b6000600260008473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060000160009054906101000a900460ff168015610b3a5750600260008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060000160009054906101000a900460ff165b905092915050565b60026020528060005260406000206000915090508060000160009054906101000a900460ff1690806001018054600181600116156101000203166002900480601f016020809104026020016040519081016040528092919081815260200182805460018160011615610100020316600290048015610c015780601f10610bd657610100808354040283529160200191610c01565b820191906000526020600020905b815481529060010190602001808311610be457829003601f168201915b5050505050905082565b6000600260008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060000160009054906101000a900460ff169050919050565b610c6d3361089e565b610cc2576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252602e8152602001806111ae602e913960400191505060405180910390fd5b610ccb81610eff565b50565b610ce2816000610f7090919063ffffffff16565b3373ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff167fe594d081b4382713733fe631966432c9cea5199afb2db5c3c1931f9f9300367960405160405180910390a350565b60008073ffffffffffffffffffffffffffffffffffffffff168273ffffffffffffffffffffffffffffffffffffffff161415610dc6576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260228152602001806111fd6022913960400191505060405180910390fd5b8260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060009054906101000a900460ff16905092915050565b610e3181600061102d90919063ffffffff16565b3373ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff167fc82bdbbf677a2462f2a7e22e4ba9abd209496b69cd7b868b3b1d28f76e09a40a60405160405180910390a350565b610ea2816001610f7090919063ffffffff16565b3373ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff167f3ed21605dd544629fb45f2ccaedcc095ba1dbea540fb6eaf5493a7479856b0be60405160405180910390a350565b610f1381600161102d90919063ffffffff16565b3373ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff167f5f36f4f5999f34947706fca376b955319b858573bf9d6bc59303c9a4cd80ced060405160405180910390a350565b610f7a8282610d3f565b610fcf576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260218152602001806111dc6021913960400191505060405180910390fd5b60008260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff0219169083151502179055505050565b6110378282610d3f565b156110aa576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252601f8152602001807f526f6c65733a206163636f756e7420616c72656164792068617320726f6c650081525060200191505060405180910390fd5b60018260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff0219169083151502179055505050565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061114957805160ff1916838001178555611177565b82800160010185558215611177579182015b8281111561117657825182559160200191906001019061115b565b5b5090506111849190611188565b5090565b6111aa91905b808211156111a657600081600090555060010161118e565b5090565b9056fe4f776e6572526f6c653a2063616c6c657220646f6573206e6f74206861766520746865204f776e657220726f6c65526f6c65733a206163636f756e7420646f6573206e6f74206861766520726f6c65526f6c65733a206163636f756e7420697320746865207a65726f20616464726573734f776e6572732063616e6e6f742072656d6f7665207468656d73656c766573206173206f776e657257686974656c6973746572526f6c653a2063616c6c657220646f6573206e6f742068617665207468652057686974656c697374657220726f6c65a165627a7a723058205e7b10434de6e2b6325080c3348211d02f4dec2bf542054bf0103b792f6597610029",
+  "sourceMap": "167:1736:7:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;167:1736:7;;;;;;;",
+  "deployedSourceMap": "167:1736:7:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;167:1736:7;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;661:177:11;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;661:177:11;;;;;;;;;;;;;;;;;;;:::i;:::-;;805:233:7;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;805:233:7;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;21:11:-1;8;5:28;2:2;;;46:1;43;36:12;2:2;805:233:7;;35:9:-1;28:4;12:14;8:25;5:40;2:2;;;58:1;55;48:12;2:2;805:233:7;;;;;;100:9:-1;95:1;81:12;77:20;67:8;63:35;60:50;39:11;25:12;22:29;11:107;8:2;;;131:1;128;121:12;8:2;805:233:7;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;30:3:-1;22:6;14;1:33;99:1;93:3;85:6;81:16;74:27;137:4;133:9;126:4;121:3;117:14;113:30;106:37;;169:3;161:6;157:16;147:26;;805:233:7;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;457:105:11;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;457:105:11;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;1406:126:7;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;1406:126:7;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;1406:126:7;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;568:87:11;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;568:87:11;;;;;;;;;;;;;;;;;;;:::i;:::-;;473:117:15;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;473:117:15;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;701:105;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;701:105:15;;;;;;;;;;;;;;;;;;;:::i;:::-;;1751:150:7;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;1751:150:7;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;518:51;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;518:51:7;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;518:51:7;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1148:121;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;1148:121:7;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;596:99:15;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;596:99:15;;;;;;;;;;;;;;;;;;;:::i;:::-;;661:177:11;363:19;371:10;363:7;:19::i;:::-;355:78;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;748:7;734:21;;:10;:21;;;;726:74;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;810:21;823:7;810:12;:21::i;:::-;661:177;:::o;805:233:7:-;904:4;361:25:15;375:10;361:13;:25::i;:::-;353:96;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;935:27:7;;;;;;;;949:6;935:27;;;;;;957:4;935:27;;;919:9;:13;929:2;919:13;;;;;;;;;;;;;;;:43;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;977:33;993:2;997:6;1005:4;977:33;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;977:33:7;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1027:4;1020:11;;805:233;;;;;:::o;457:105:11:-;512:4;535:20;547:7;535;:11;;:20;;;;:::i;:::-;528:27;;457:105;;;:::o;1406:126:7:-;1470:13;1501:9;:19;1511:8;1501:19;;;;;;;;;;;;;;;:24;;1494:31;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1406:126;;;:::o;568:87:11:-;363:19;371:10;363:7;:19::i;:::-;355:78;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;630:18;640:7;630:9;:18::i;:::-;568:87;:::o;473:117:15:-;534:4;557:26;575:7;557:13;:17;;:26;;;;:::i;:::-;550:33;;473:117;;;:::o;701:105::-;363:19:11;371:10;363:7;:19::i;:::-;355:78;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;772:27:15;791:7;772:18;:27::i;:::-;701:105;:::o;1751:150:7:-;1825:4;1848:9;:15;1858:4;1848:15;;;;;;;;;;;;;;;:22;;;;;;;;;;;;:46;;;;;1874:9;:13;1884:2;1874:13;;;;;;;;;;;;;;;:20;;;;;;;;;;;;1848:46;1841:53;;1751:150;;;;:::o;518:51::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;1148:121::-;1214:4;1236:9;:19;1246:8;1236:19;;;;;;;;;;;;;;;:26;;;;;;;;;;;;1229:33;;1148:121;;;:::o;596:99:15:-;363:19:11;371:10;363:7;:19::i;:::-;355:78;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;664:24:15;680:7;664:15;:24::i;:::-;596:99;:::o;978:136:11:-;1036:23;1051:7;1036;:14;;:23;;;;:::i;:::-;1096:10;1074:33;;1087:7;1074:33;;;;;;;;;;;;978:136;:::o;779:200:17:-;851:4;894:1;875:21;;:7;:21;;;;867:68;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;952:4;:11;;:20;964:7;952:20;;;;;;;;;;;;;;;;;;;;;;;;;945:27;;779:200;;;;:::o;844:128:11:-;899:20;911:7;899;:11;;:20;;;;:::i;:::-;954:10;934:31;;945:7;934:31;;;;;;;;;;;;844:128;:::o;964:154:15:-;1028:29;1049:7;1028:13;:20;;:29;;;;:::i;:::-;1100:10;1072:39;;1091:7;1072:39;;;;;;;;;;;;964:154;:::o;812:146::-;873:26;891:7;873:13;:17;;:26;;;;:::i;:::-;940:10;914:37;;931:7;914:37;;;;;;;;;;;;812:146;:::o;510:180:17:-;589:18;593:4;599:7;589:3;:18::i;:::-;581:64;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;678:5;655:4;:11;;:20;667:7;655:20;;;;;;;;;;;;;;;;:28;;;;;;;;;;;;;;;;;;510:180;;:::o;260:175::-;337:18;341:4;347:7;337:3;:18::i;:::-;336:19;328:63;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;424:4;401;:11;;:20;413:7;401:20;;;;;;;;;;;;;;;;:27;;;;;;;;;;;;;;;;;;260:175;;:::o;167:1736:7:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity 0.5.8;\n\nimport \"../roles/WhitelisterRole.sol\";\n\n/**\n * @title Whitelistable\n * @dev Allows tracking whether addressess are allowed to hold tokens.\n */\ncontract Whitelistable is WhitelisterRole {\n\n    event WhitelistUpdate(address _address, bool status, string data);\n\n    // Tracks whether an address is whitelisted\n    // data field can track any external field (like a hash of personal details)\n    struct whiteListItem {\n        bool status;\n        string data;\n    }\n\n    // white list status\n    mapping (address => whiteListItem) public whitelist;\n\n    /**\n    * @dev Set a white list address\n    * @param to the address to be set\n    * @param status the whitelisting status (true for yes, false for no)\n    * @param data a string with data about the whitelisted address\n    */\n    function setWhitelist(address to, bool status, string memory data)  public onlyWhitelister returns(bool){\n        whitelist[to] = whiteListItem(status, data);\n        emit WhitelistUpdate(to, status, data);\n        return true;\n    }\n\n    /**\n    * @dev Get the status of the whitelist\n    * @param _address the address to be check\n    */\n    function getWhitelistStatus(address _address) public view returns(bool){\n        return whitelist[_address].status;\n    }\n\n    /**\n    * @dev Get the data of and address in the whitelist\n    * @param _address the address to retrieve the data from\n    */\n    function getWhitelistData(address _address) public view returns(string memory){\n        return whitelist[_address].data;\n    }\n\n    /**\n    * @dev Determine if sender and receiver are whitelisted, return true if both accounts are whitelisted\n    * @param from The address sending tokens.\n    * @param to The address receiving tokens.\n    */\n    function checkWhitelists(address from, address to) external view returns (bool) {\n        return whitelist[from].status && whitelist[to].status;\n    }\n}\n",
+  "sourcePath": "/Users/JohnDoe/Desktop/erc1404-simulator/presetupERC1404/contracts/capabilities/Whitelistable.sol",
+  "ast": {
+    "absolutePath": "/Users/JohnDoe/Desktop/erc1404-simulator/presetupERC1404/contracts/capabilities/Whitelistable.sol",
+    "exportedSymbols": {
+      "Whitelistable": [
+        819
+      ]
+    },
+    "id": 820,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 721,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".8"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:7"
+      },
+      {
+        "absolutePath": "/Users/JohnDoe/Desktop/erc1404-simulator/presetupERC1404/contracts/roles/WhitelisterRole.sol",
+        "file": "../roles/WhitelisterRole.sol",
+        "id": 722,
+        "nodeType": "ImportDirective",
+        "scope": 820,
+        "sourceUnit": 1552,
+        "src": "24:38:7",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 723,
+              "name": "WhitelisterRole",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1551,
+              "src": "193:15:7",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_WhitelisterRole_$1551",
+                "typeString": "contract WhitelisterRole"
+              }
+            },
+            "id": 724,
+            "nodeType": "InheritanceSpecifier",
+            "src": "193:15:7"
+          }
+        ],
+        "contractDependencies": [
+          1131,
+          1551
+        ],
+        "contractKind": "contract",
+        "documentation": "@title Whitelistable\n@dev Allows tracking whether addressess are allowed to hold tokens.",
+        "fullyImplemented": true,
+        "id": 819,
+        "linearizedBaseContracts": [
+          819,
+          1551,
+          1131
+        ],
+        "name": "Whitelistable",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 732,
+            "name": "WhitelistUpdate",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 731,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 726,
+                  "indexed": false,
+                  "name": "_address",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 732,
+                  "src": "238:16:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 725,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "238:7:7",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 728,
+                  "indexed": false,
+                  "name": "status",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 732,
+                  "src": "256:11:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 727,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "256:4:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 730,
+                  "indexed": false,
+                  "name": "data",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 732,
+                  "src": "269:11:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 729,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "269:6:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "237:44:7"
+            },
+            "src": "216:66:7"
+          },
+          {
+            "canonicalName": "Whitelistable.whiteListItem",
+            "id": 737,
+            "members": [
+              {
+                "constant": false,
+                "id": 734,
+                "name": "status",
+                "nodeType": "VariableDeclaration",
+                "scope": 737,
+                "src": "448:11:7",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 733,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "448:4:7",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 736,
+                "name": "data",
+                "nodeType": "VariableDeclaration",
+                "scope": 737,
+                "src": "469:11:7",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 735,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "469:6:7",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "whiteListItem",
+            "nodeType": "StructDefinition",
+            "scope": 819,
+            "src": "417:70:7",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 741,
+            "name": "whitelist",
+            "nodeType": "VariableDeclaration",
+            "scope": 819,
+            "src": "518:51:7",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_struct$_whiteListItem_$737_storage_$",
+              "typeString": "mapping(address => struct Whitelistable.whiteListItem)"
+            },
+            "typeName": {
+              "id": 740,
+              "keyType": {
+                "id": 738,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "527:7:7",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "518:34:7",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_struct$_whiteListItem_$737_storage_$",
+                "typeString": "mapping(address => struct Whitelistable.whiteListItem)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 739,
+                "name": "whiteListItem",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 737,
+                "src": "538:13:7",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_whiteListItem_$737_storage_ptr",
+                  "typeString": "struct Whitelistable.whiteListItem"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 771,
+              "nodeType": "Block",
+              "src": "909:129:7",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 761,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 754,
+                        "name": "whitelist",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 741,
+                        "src": "919:9:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_struct$_whiteListItem_$737_storage_$",
+                          "typeString": "mapping(address => struct Whitelistable.whiteListItem storage ref)"
+                        }
+                      },
+                      "id": 756,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 755,
+                        "name": "to",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 743,
+                        "src": "929:2:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "919:13:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_whiteListItem_$737_storage",
+                        "typeString": "struct Whitelistable.whiteListItem storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 758,
+                          "name": "status",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 745,
+                          "src": "949:6:7",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "id": 759,
+                          "name": "data",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 747,
+                          "src": "957:4:7",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          },
+                          {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        ],
+                        "id": 757,
+                        "name": "whiteListItem",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 737,
+                        "src": "935:13:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_struct$_whiteListItem_$737_storage_ptr_$",
+                          "typeString": "type(struct Whitelistable.whiteListItem storage pointer)"
+                        }
+                      },
+                      "id": 760,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "structConstructorCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "935:27:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_whiteListItem_$737_memory",
+                        "typeString": "struct Whitelistable.whiteListItem memory"
+                      }
+                    },
+                    "src": "919:43:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_whiteListItem_$737_storage",
+                      "typeString": "struct Whitelistable.whiteListItem storage ref"
+                    }
+                  },
+                  "id": 762,
+                  "nodeType": "ExpressionStatement",
+                  "src": "919:43:7"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 764,
+                        "name": "to",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 743,
+                        "src": "993:2:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 765,
+                        "name": "status",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 745,
+                        "src": "997:6:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 766,
+                        "name": "data",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 747,
+                        "src": "1005:4:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      ],
+                      "id": 763,
+                      "name": "WhitelistUpdate",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 732,
+                      "src": "977:15:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (address,bool,string memory)"
+                      }
+                    },
+                    "id": 767,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "977:33:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 768,
+                  "nodeType": "EmitStatement",
+                  "src": "972:38:7"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "hexValue": "74727565",
+                    "id": 769,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "bool",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "1027:4:7",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    },
+                    "value": "true"
+                  },
+                  "functionReturnParameters": 753,
+                  "id": 770,
+                  "nodeType": "Return",
+                  "src": "1020:11:7"
+                }
+              ]
+            },
+            "documentation": "@dev Set a white list address\n@param to the address to be set\n@param status the whitelisting status (true for yes, false for no)\n@param data a string with data about the whitelisted address",
+            "id": 772,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 750,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 749,
+                  "name": "onlyWhitelister",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 1477,
+                  "src": "880:15:7",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "880:15:7"
+              }
+            ],
+            "name": "setWhitelist",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 748,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 743,
+                  "name": "to",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 772,
+                  "src": "827:10:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 742,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "827:7:7",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 745,
+                  "name": "status",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 772,
+                  "src": "839:11:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 744,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "839:4:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 747,
+                  "name": "data",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 772,
+                  "src": "852:18:7",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 746,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "852:6:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "826:45:7"
+            },
+            "returnParameters": {
+              "id": 753,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 752,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 772,
+                  "src": "904:4:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 751,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "904:4:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "903:6:7"
+            },
+            "scope": 819,
+            "src": "805:233:7",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 784,
+              "nodeType": "Block",
+              "src": "1219:50:7",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 779,
+                        "name": "whitelist",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 741,
+                        "src": "1236:9:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_struct$_whiteListItem_$737_storage_$",
+                          "typeString": "mapping(address => struct Whitelistable.whiteListItem storage ref)"
+                        }
+                      },
+                      "id": 781,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 780,
+                        "name": "_address",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 774,
+                        "src": "1246:8:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "IndexAccess",
+                      "src": "1236:19:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_whiteListItem_$737_storage",
+                        "typeString": "struct Whitelistable.whiteListItem storage ref"
+                      }
+                    },
+                    "id": 782,
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "status",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": 734,
+                    "src": "1236:26:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 778,
+                  "id": 783,
+                  "nodeType": "Return",
+                  "src": "1229:33:7"
+                }
+              ]
+            },
+            "documentation": "@dev Get the status of the whitelist\n@param _address the address to be check",
+            "id": 785,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getWhitelistStatus",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 775,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 774,
+                  "name": "_address",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 785,
+                  "src": "1176:16:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 773,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1176:7:7",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1175:18:7"
+            },
+            "returnParameters": {
+              "id": 778,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 777,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 785,
+                  "src": "1214:4:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 776,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1214:4:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1213:6:7"
+            },
+            "scope": 819,
+            "src": "1148:121:7",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 797,
+              "nodeType": "Block",
+              "src": "1484:48:7",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 792,
+                        "name": "whitelist",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 741,
+                        "src": "1501:9:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_struct$_whiteListItem_$737_storage_$",
+                          "typeString": "mapping(address => struct Whitelistable.whiteListItem storage ref)"
+                        }
+                      },
+                      "id": 794,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 793,
+                        "name": "_address",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 787,
+                        "src": "1511:8:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "IndexAccess",
+                      "src": "1501:19:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_whiteListItem_$737_storage",
+                        "typeString": "struct Whitelistable.whiteListItem storage ref"
+                      }
+                    },
+                    "id": 795,
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "data",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": 736,
+                    "src": "1501:24:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage",
+                      "typeString": "string storage ref"
+                    }
+                  },
+                  "functionReturnParameters": 791,
+                  "id": 796,
+                  "nodeType": "Return",
+                  "src": "1494:31:7"
+                }
+              ]
+            },
+            "documentation": "@dev Get the data of and address in the whitelist\n@param _address the address to retrieve the data from",
+            "id": 798,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getWhitelistData",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 788,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 787,
+                  "name": "_address",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 798,
+                  "src": "1432:16:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 786,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1432:7:7",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1431:18:7"
+            },
+            "returnParameters": {
+              "id": 791,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 790,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 798,
+                  "src": "1470:13:7",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 789,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1470:6:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1469:15:7"
+            },
+            "scope": 819,
+            "src": "1406:126:7",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 817,
+              "nodeType": "Block",
+              "src": "1831:70:7",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    },
+                    "id": 815,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "baseExpression": {
+                          "argumentTypes": null,
+                          "id": 807,
+                          "name": "whitelist",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 741,
+                          "src": "1848:9:7",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_address_$_t_struct$_whiteListItem_$737_storage_$",
+                            "typeString": "mapping(address => struct Whitelistable.whiteListItem storage ref)"
+                          }
+                        },
+                        "id": 809,
+                        "indexExpression": {
+                          "argumentTypes": null,
+                          "id": 808,
+                          "name": "from",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 800,
+                          "src": "1858:4:7",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "1848:15:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_whiteListItem_$737_storage",
+                          "typeString": "struct Whitelistable.whiteListItem storage ref"
+                        }
+                      },
+                      "id": 810,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "status",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 734,
+                      "src": "1848:22:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "&&",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "baseExpression": {
+                          "argumentTypes": null,
+                          "id": 811,
+                          "name": "whitelist",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 741,
+                          "src": "1874:9:7",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_address_$_t_struct$_whiteListItem_$737_storage_$",
+                            "typeString": "mapping(address => struct Whitelistable.whiteListItem storage ref)"
+                          }
+                        },
+                        "id": 813,
+                        "indexExpression": {
+                          "argumentTypes": null,
+                          "id": 812,
+                          "name": "to",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 802,
+                          "src": "1884:2:7",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "1874:13:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_whiteListItem_$737_storage",
+                          "typeString": "struct Whitelistable.whiteListItem storage ref"
+                        }
+                      },
+                      "id": 814,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "status",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 734,
+                      "src": "1874:20:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "src": "1848:46:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 806,
+                  "id": 816,
+                  "nodeType": "Return",
+                  "src": "1841:53:7"
+                }
+              ]
+            },
+            "documentation": "@dev Determine if sender and receiver are whitelisted, return true if both accounts are whitelisted\n@param from The address sending tokens.\n@param to The address receiving tokens.",
+            "id": 818,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "checkWhitelists",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 803,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 800,
+                  "name": "from",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 818,
+                  "src": "1776:12:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 799,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1776:7:7",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 802,
+                  "name": "to",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 818,
+                  "src": "1790:10:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 801,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1790:7:7",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1775:26:7"
+            },
+            "returnParameters": {
+              "id": 806,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 805,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 818,
+                  "src": "1825:4:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 804,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1825:4:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1824:6:7"
+            },
+            "scope": 819,
+            "src": "1751:150:7",
+            "stateMutability": "view",
+            "superFunction": 54,
+            "visibility": "external"
+          }
+        ],
+        "scope": 820,
+        "src": "167:1736:7"
+      }
+    ],
+    "src": "0:1904:7"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/JohnDoe/Desktop/erc1404-simulator/presetupERC1404/contracts/capabilities/Whitelistable.sol",
+    "exportedSymbols": {
+      "Whitelistable": [
+        819
+      ]
+    },
+    "id": 820,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 721,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".8"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:7"
+      },
+      {
+        "absolutePath": "/Users/JohnDoe/Desktop/erc1404-simulator/presetupERC1404/contracts/roles/WhitelisterRole.sol",
+        "file": "../roles/WhitelisterRole.sol",
+        "id": 722,
+        "nodeType": "ImportDirective",
+        "scope": 820,
+        "sourceUnit": 1552,
+        "src": "24:38:7",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 723,
+              "name": "WhitelisterRole",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1551,
+              "src": "193:15:7",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_WhitelisterRole_$1551",
+                "typeString": "contract WhitelisterRole"
+              }
+            },
+            "id": 724,
+            "nodeType": "InheritanceSpecifier",
+            "src": "193:15:7"
+          }
+        ],
+        "contractDependencies": [
+          1131,
+          1551
+        ],
+        "contractKind": "contract",
+        "documentation": "@title Whitelistable\n@dev Allows tracking whether addressess are allowed to hold tokens.",
+        "fullyImplemented": true,
+        "id": 819,
+        "linearizedBaseContracts": [
+          819,
+          1551,
+          1131
+        ],
+        "name": "Whitelistable",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 732,
+            "name": "WhitelistUpdate",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 731,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 726,
+                  "indexed": false,
+                  "name": "_address",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 732,
+                  "src": "238:16:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 725,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "238:7:7",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 728,
+                  "indexed": false,
+                  "name": "status",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 732,
+                  "src": "256:11:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 727,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "256:4:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 730,
+                  "indexed": false,
+                  "name": "data",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 732,
+                  "src": "269:11:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 729,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "269:6:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "237:44:7"
+            },
+            "src": "216:66:7"
+          },
+          {
+            "canonicalName": "Whitelistable.whiteListItem",
+            "id": 737,
+            "members": [
+              {
+                "constant": false,
+                "id": 734,
+                "name": "status",
+                "nodeType": "VariableDeclaration",
+                "scope": 737,
+                "src": "448:11:7",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 733,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "448:4:7",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 736,
+                "name": "data",
+                "nodeType": "VariableDeclaration",
+                "scope": 737,
+                "src": "469:11:7",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 735,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "469:6:7",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "whiteListItem",
+            "nodeType": "StructDefinition",
+            "scope": 819,
+            "src": "417:70:7",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 741,
+            "name": "whitelist",
+            "nodeType": "VariableDeclaration",
+            "scope": 819,
+            "src": "518:51:7",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_struct$_whiteListItem_$737_storage_$",
+              "typeString": "mapping(address => struct Whitelistable.whiteListItem)"
+            },
+            "typeName": {
+              "id": 740,
+              "keyType": {
+                "id": 738,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "527:7:7",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "518:34:7",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_struct$_whiteListItem_$737_storage_$",
+                "typeString": "mapping(address => struct Whitelistable.whiteListItem)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 739,
+                "name": "whiteListItem",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 737,
+                "src": "538:13:7",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_whiteListItem_$737_storage_ptr",
+                  "typeString": "struct Whitelistable.whiteListItem"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 771,
+              "nodeType": "Block",
+              "src": "909:129:7",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 761,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 754,
+                        "name": "whitelist",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 741,
+                        "src": "919:9:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_struct$_whiteListItem_$737_storage_$",
+                          "typeString": "mapping(address => struct Whitelistable.whiteListItem storage ref)"
+                        }
+                      },
+                      "id": 756,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 755,
+                        "name": "to",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 743,
+                        "src": "929:2:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "919:13:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_whiteListItem_$737_storage",
+                        "typeString": "struct Whitelistable.whiteListItem storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 758,
+                          "name": "status",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 745,
+                          "src": "949:6:7",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "id": 759,
+                          "name": "data",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 747,
+                          "src": "957:4:7",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          },
+                          {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        ],
+                        "id": 757,
+                        "name": "whiteListItem",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 737,
+                        "src": "935:13:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_struct$_whiteListItem_$737_storage_ptr_$",
+                          "typeString": "type(struct Whitelistable.whiteListItem storage pointer)"
+                        }
+                      },
+                      "id": 760,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "structConstructorCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "935:27:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_whiteListItem_$737_memory",
+                        "typeString": "struct Whitelistable.whiteListItem memory"
+                      }
+                    },
+                    "src": "919:43:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_whiteListItem_$737_storage",
+                      "typeString": "struct Whitelistable.whiteListItem storage ref"
+                    }
+                  },
+                  "id": 762,
+                  "nodeType": "ExpressionStatement",
+                  "src": "919:43:7"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 764,
+                        "name": "to",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 743,
+                        "src": "993:2:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 765,
+                        "name": "status",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 745,
+                        "src": "997:6:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 766,
+                        "name": "data",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 747,
+                        "src": "1005:4:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      ],
+                      "id": 763,
+                      "name": "WhitelistUpdate",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 732,
+                      "src": "977:15:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (address,bool,string memory)"
+                      }
+                    },
+                    "id": 767,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "977:33:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 768,
+                  "nodeType": "EmitStatement",
+                  "src": "972:38:7"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "hexValue": "74727565",
+                    "id": 769,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "bool",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "1027:4:7",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    },
+                    "value": "true"
+                  },
+                  "functionReturnParameters": 753,
+                  "id": 770,
+                  "nodeType": "Return",
+                  "src": "1020:11:7"
+                }
+              ]
+            },
+            "documentation": "@dev Set a white list address\n@param to the address to be set\n@param status the whitelisting status (true for yes, false for no)\n@param data a string with data about the whitelisted address",
+            "id": 772,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 750,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 749,
+                  "name": "onlyWhitelister",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 1477,
+                  "src": "880:15:7",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "880:15:7"
+              }
+            ],
+            "name": "setWhitelist",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 748,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 743,
+                  "name": "to",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 772,
+                  "src": "827:10:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 742,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "827:7:7",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 745,
+                  "name": "status",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 772,
+                  "src": "839:11:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 744,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "839:4:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 747,
+                  "name": "data",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 772,
+                  "src": "852:18:7",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 746,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "852:6:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "826:45:7"
+            },
+            "returnParameters": {
+              "id": 753,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 752,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 772,
+                  "src": "904:4:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 751,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "904:4:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "903:6:7"
+            },
+            "scope": 819,
+            "src": "805:233:7",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 784,
+              "nodeType": "Block",
+              "src": "1219:50:7",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 779,
+                        "name": "whitelist",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 741,
+                        "src": "1236:9:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_struct$_whiteListItem_$737_storage_$",
+                          "typeString": "mapping(address => struct Whitelistable.whiteListItem storage ref)"
+                        }
+                      },
+                      "id": 781,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 780,
+                        "name": "_address",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 774,
+                        "src": "1246:8:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "IndexAccess",
+                      "src": "1236:19:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_whiteListItem_$737_storage",
+                        "typeString": "struct Whitelistable.whiteListItem storage ref"
+                      }
+                    },
+                    "id": 782,
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "status",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": 734,
+                    "src": "1236:26:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 778,
+                  "id": 783,
+                  "nodeType": "Return",
+                  "src": "1229:33:7"
+                }
+              ]
+            },
+            "documentation": "@dev Get the status of the whitelist\n@param _address the address to be check",
+            "id": 785,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getWhitelistStatus",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 775,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 774,
+                  "name": "_address",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 785,
+                  "src": "1176:16:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 773,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1176:7:7",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1175:18:7"
+            },
+            "returnParameters": {
+              "id": 778,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 777,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 785,
+                  "src": "1214:4:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 776,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1214:4:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1213:6:7"
+            },
+            "scope": 819,
+            "src": "1148:121:7",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 797,
+              "nodeType": "Block",
+              "src": "1484:48:7",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 792,
+                        "name": "whitelist",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 741,
+                        "src": "1501:9:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_struct$_whiteListItem_$737_storage_$",
+                          "typeString": "mapping(address => struct Whitelistable.whiteListItem storage ref)"
+                        }
+                      },
+                      "id": 794,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 793,
+                        "name": "_address",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 787,
+                        "src": "1511:8:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "IndexAccess",
+                      "src": "1501:19:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_whiteListItem_$737_storage",
+                        "typeString": "struct Whitelistable.whiteListItem storage ref"
+                      }
+                    },
+                    "id": 795,
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "data",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": 736,
+                    "src": "1501:24:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage",
+                      "typeString": "string storage ref"
+                    }
+                  },
+                  "functionReturnParameters": 791,
+                  "id": 796,
+                  "nodeType": "Return",
+                  "src": "1494:31:7"
+                }
+              ]
+            },
+            "documentation": "@dev Get the data of and address in the whitelist\n@param _address the address to retrieve the data from",
+            "id": 798,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getWhitelistData",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 788,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 787,
+                  "name": "_address",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 798,
+                  "src": "1432:16:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 786,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1432:7:7",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1431:18:7"
+            },
+            "returnParameters": {
+              "id": 791,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 790,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 798,
+                  "src": "1470:13:7",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 789,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1470:6:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1469:15:7"
+            },
+            "scope": 819,
+            "src": "1406:126:7",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 817,
+              "nodeType": "Block",
+              "src": "1831:70:7",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    },
+                    "id": 815,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "baseExpression": {
+                          "argumentTypes": null,
+                          "id": 807,
+                          "name": "whitelist",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 741,
+                          "src": "1848:9:7",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_address_$_t_struct$_whiteListItem_$737_storage_$",
+                            "typeString": "mapping(address => struct Whitelistable.whiteListItem storage ref)"
+                          }
+                        },
+                        "id": 809,
+                        "indexExpression": {
+                          "argumentTypes": null,
+                          "id": 808,
+                          "name": "from",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 800,
+                          "src": "1858:4:7",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "1848:15:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_whiteListItem_$737_storage",
+                          "typeString": "struct Whitelistable.whiteListItem storage ref"
+                        }
+                      },
+                      "id": 810,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "status",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 734,
+                      "src": "1848:22:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "&&",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "baseExpression": {
+                          "argumentTypes": null,
+                          "id": 811,
+                          "name": "whitelist",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 741,
+                          "src": "1874:9:7",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_address_$_t_struct$_whiteListItem_$737_storage_$",
+                            "typeString": "mapping(address => struct Whitelistable.whiteListItem storage ref)"
+                          }
+                        },
+                        "id": 813,
+                        "indexExpression": {
+                          "argumentTypes": null,
+                          "id": 812,
+                          "name": "to",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 802,
+                          "src": "1884:2:7",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "1874:13:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_whiteListItem_$737_storage",
+                          "typeString": "struct Whitelistable.whiteListItem storage ref"
+                        }
+                      },
+                      "id": 814,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "status",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 734,
+                      "src": "1874:20:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "src": "1848:46:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 806,
+                  "id": 816,
+                  "nodeType": "Return",
+                  "src": "1841:53:7"
+                }
+              ]
+            },
+            "documentation": "@dev Determine if sender and receiver are whitelisted, return true if both accounts are whitelisted\n@param from The address sending tokens.\n@param to The address receiving tokens.",
+            "id": 818,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "checkWhitelists",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 803,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 800,
+                  "name": "from",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 818,
+                  "src": "1776:12:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 799,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1776:7:7",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 802,
+                  "name": "to",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 818,
+                  "src": "1790:10:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 801,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1790:7:7",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1775:26:7"
+            },
+            "returnParameters": {
+              "id": 806,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 805,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 818,
+                  "src": "1825:4:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 804,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1825:4:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1824:6:7"
+            },
+            "scope": 819,
+            "src": "1751:150:7",
+            "stateMutability": "view",
+            "superFunction": 54,
+            "visibility": "external"
+          }
+        ],
+        "scope": 820,
+        "src": "167:1736:7"
+      }
+    ],
+    "src": "0:1904:7"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.8+commit.23d335f2.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.20",
+  "updatedAt": "2020-03-03T12:32:02.198Z",
+  "devdoc": {
+    "details": "Allows tracking whether addressess are allowed to hold tokens.",
+    "methods": {
+      "checkWhitelists(address,address)": {
+        "details": "Determine if sender and receiver are whitelisted, return true if both accounts are whitelisted",
+        "params": {
+          "from": "The address sending tokens.",
+          "to": "The address receiving tokens."
+        }
+      },
+      "getWhitelistData(address)": {
+        "details": "Get the data of and address in the whitelist",
+        "params": {
+          "_address": "the address to retrieve the data from"
+        }
+      },
+      "getWhitelistStatus(address)": {
+        "details": "Get the status of the whitelist",
+        "params": {
+          "_address": "the address to be check"
+        }
+      },
+      "setWhitelist(address,bool,string)": {
+        "details": "Set a white list address",
+        "params": {
+          "data": "a string with data about the whitelisted address",
+          "status": "the whitelisting status (true for yes, false for no)",
+          "to": "the address to be set"
+        }
+      }
+    },
+    "title": "Whitelistable"
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

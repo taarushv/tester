@@ -1,0 +1,174 @@
+//truffle 
+truffle compile
+truffle migrate --network development
+truffle console
+
+
+// truffle snips
+InxToken.deployed().then(inst => { inx = inst })
+
+//acc 0
+inx.balanceOf("0xe808BA304fcb7646C13799927F5De549802900cA").then(res => { console.log(res.toString())})
+
+//acc 1
+inx.balanceOf("0x35d34D38d0e01570bB0349964a8e9b30d21C9Adc").then(res => { console.log(res.toString())})
+
+//acc 2
+inx.balanceOf("0x4Fb5CFF8acf6Eb02b0d1ecB1646aB9514d40F3DF").then(res => { console.log(res.toString())})
+
+//acc 3
+inx.balanceOf("0x12bf1BA9a4B8665FDA3b3bdf1F163bE210Ec9069").then(res => { console.log(res.toString())})
+
+
+// transfer from acc0 to 1
+inx.transfer("0x35d34D38d0e01570bB0349964a8e9b30d21C9Adc", 20, { from: "0xe808BA304fcb7646C13799927F5De549802900cA" }).then( res => { console.log(res)})
+
+inx.transfer("0x4Fb5CFF8acf6Eb02b0d1ecB1646aB9514d40F3DF", 2000, { from: "0xe808BA304fcb7646C13799927F5De549802900cA" }).then( res => { console.log(res)})
+
+inx.transfer("0x35d34D38d0e01570bB0349964a8e9b30d21C9Adc", 2000, { from: "0x4Fb5CFF8acf6Eb02b0d1ecB1646aB9514d40F3DF" }).then( res => { console.log(res)})
+
+inx.transfer("0xc48f6C5D3F2B74E72FEB46322Cc8d104EEd57A66", 10, { from: "0x12935f074E6138137c1Cd51C3FaFCaD5Af648DA4" }).then( res => { console.log(res)})
+
+
+inx.transfer("0x12935f074E6138137c1Cd51C3FaFCaD5Af648DA4", 5, { from: "0x31bC2d34f76Dd4A880848c46d2b84a179e929790" }).then( res => { console.log(res)})
+
+inx.transfer("0xea3fA2fadd574D72927b634Eea00E04200197A8c", 5, { from: "0x12935f074E6138137c1Cd51C3FaFCaD5Af648DA4" }).then( res => { console.log(res)})
+
+// total supply
+inx.totalSupply().then(res => { console.log(res.toString())})
+
+
+// white list check 
+inx.checkWhitelistStatus("0xe808BA304fcb7646C13799927F5De549802900cA").then(res => { console.log(res)})
+inx.checkWhitelistStatus("0x35d34D38d0e01570bB0349964a8e9b30d21C9Adc").then(res => { console.log(res)})
+inx.checkWhitelistStatus("0x4Fb5CFF8acf6Eb02b0d1ecB1646aB9514d40F3DF").then(res => { console.log(res)})
+inx.checkWhitelistStatus("0x12bf1BA9a4B8665FDA3b3bdf1F163bE210Ec9069").then(res => { console.log(res)})
+
+inx.getWhitelistData("0x31bC2d34f76Dd4A880848c46d2b84a179e929790").then(res => { console.log(res)})
+inx.setWhitelist("0x35d34D38d0e01570bB0349964a8e9b30d21C9Adc", true, "hello").then(res => { console.log(res)})
+inx.setWhitelist("0xe808BA304fcb7646C13799927F5De549802900cA", true, "hello").then(res => { console.log(res)})
+inx.setWhitelist("0x4Fb5CFF8acf6Eb02b0d1ecB1646aB9514d40F3DF", true, "hello",{ from: "0x35d34D38d0e01570bB0349964a8e9b30d21C9Adc" }).then(res => { console.log(res)})
+
+inx.setWhitelist("0x12bf1BA9a4B8665FDA3b3bdf1F163bE210Ec9069", true, "hello").then(res => { console.log(res)})
+
+// update service
+inx.updateInxService("0xe5dB4EC0C330b1A3Ef95b4000F4Df15DfB2EF030", {from: "0x31bC2d34f76Dd4A880848c46d2b84a179e929790"}).then( res => {console.log(res)});
+inx.updateInxService("0xe5dB4EC0C330b1A3Ef95b4000F4Df15DfB2EF030", {from: "0xc48f6C5D3F2B74E72FEB46322Cc8d104EEd57A66"}).then( res => {console.log(res)});
+inx.updateInxService("0xF895cA30721091a81D2A46e1FC03f717E36Cf855", {from: "0x12935f074E6138137c1Cd51C3FaFCaD5Af648DA4"}).then( res => {console.log(res)});
+
+// whitelisters
+inx.isWhitelister( {from: "0xe808BA304fcb7646C13799927F5De549802900cA"}).then( res => {console.log(res)});
+inx.isWhitelister( {from: "0x31bC2d34f76Dd4A880848c46d2b84a179e929790"}).then( res => {console.log(res)});
+inx.isWhitelister( {from: "0x4Fb5CFF8acf6Eb02b0d1ecB1646aB9514d40F3DF"}).then( res => {console.log(res)});
+inx.addWhitelister("0x35d34D38d0e01570bB0349964a8e9b30d21C9Adc", {from: "0xe808BA304fcb7646C13799927F5De549802900cA"}).then( res => {console.log(res)});
+inx.addWhitelister("0x2ee8D62Ae9A48e24CDAF83A220eA2de0d4870c1a", {from: "0xc48f6C5D3F2B74E72FEB46322Cc8d104EEd57A66"}).then( res => {console.log(res)});
+inx.addWhitelister("0x4Fb5CFF8acf6Eb02b0d1ecB1646aB9514d40F3DF", {from: "0xc48f6C5D3F2B74E72FEB46322Cc8d104EEd57A66"}).then( res => {console.log(res)});
+
+// add owner
+inx.addOwner("0x12935f074E6138137c1Cd51C3FaFCaD5Af648DA4", {from: "0x31bC2d34f76Dd4A880848c46d2b84a179e929790"}).then( res => {console.log(res)});
+inx.addOwner("0x12935f074E6138137c1Cd51C3FaFCaD5Af648DA4", {from: "0xc48f6C5D3F2B74E72FEB46322Cc8d104EEd57A66"}).then( res => {console.log(res)});
+
+// lock 
+// epoc 2030 (secounds) - 1558621950
+inx.lock("0x4Fb5CFF8acf6Eb02b0d1ecB1646aB9514d40F3DF", 2000, 1558621950).then( res => { console.log(res)} );
+
+inx.lock("0xfDdaB7Ca635A78b3EBDeE38712b09c59d06e0362", 10, 1555198800).then( res => { console.log(res)} );
+
+
+inx.lock("0x35d34D38d0e01570bB0349964a8e9b30d21C9Adc", 100, 1589974571).then( res => { console.log(res)} );
+inx.release("0x4Fb5CFF8acf6Eb02b0d1ecB1646aB9514d40F3DF", 2000).then( res => { console.log(res)});
+inx.release("0x4Fb5CFF8acf6Eb02b0d1ecB1646aB9514d40F3DF", 1000).then( res => { console.log(res)});
+inx.checkLockup.call("0x4Fb5CFF8acf6Eb02b0d1ecB1646aB9514d40F3DF").then( res => { console.log(res[0].toNumber(), res[1].toNumber())});
+inx.checkLockup.call("0x31bC2d34f76Dd4A880848c46d2b84a179e929790").then( res => { console.log(res[0].toNumber(), res[1].toNumber())});
+web3.eth.getBlock('latest').then(res => console.log(res.timestamp));
+
+// approve & transfer from  
+inx.approve("0x12bf1BA9a4B8665FDA3b3bdf1F163bE210Ec9069", 2000, {from: "0xe808BA304fcb7646C13799927F5De549802900cA" }).then(res => {console.log(res)});
+inx.increaseApproval("0x12bf1BA9a4B8665FDA3b3bdf1F163bE210Ec9069", 500, {from: "0xe808BA304fcb7646C13799927F5De549802900cA" }).then(res => {console.log(res)});
+inx.decreaseApproval("0x12bf1BA9a4B8665FDA3b3bdf1F163bE210Ec9069", 350, {from: "0xe808BA304fcb7646C13799927F5De549802900cA" }).then(res => {console.log(res)});
+
+
+inx.transferFrom("0xe808BA304fcb7646C13799927F5De549802900cA", "0x35d34D38d0e01570bB0349964a8e9b30d21C9Adc", 500, {from:"0x12bf1BA9a4B8665FDA3b3bdf1F163bE210Ec9069"}).then( res => { console.log(res)});
+inx.transferFrom("0xc48f6C5D3F2B74E72FEB46322Cc8d104EEd57A66", "0x31bC2d34f76Dd4A880848c46d2b84a179e929790", 5000, {from:"0xDc6C00Ad0e166c5Ed515194aB56e9c4BFDB1d2AD"}).then( res => { console.log(res)});
+inx.allowance("0xe808BA304fcb7646C13799927F5De549802900cA", "0x12bf1BA9a4B8665FDA3b3bdf1F163bE210Ec9069").then( res => {console.log(res.toNumber())}); 
+
+
+
+// acc1
+0xc48f6C5D3F2B74E72FEB46322Cc8d104EEd57A66
+
+// acc2
+0x31bC2d34f76Dd4A880848c46d2b84a179e929790
+
+// acc3
+0x12935f074E6138137c1Cd51C3FaFCaD5Af648DA4
+
+acc0 = web3.eth.accounts[0]
+acc1 = web3.eth.accounts[1]
+acc1 = web3.eth.accounts[2]
+acc1 = web3.eth.accounts[3]
+
+//////////////////////////////////////////////////
+
+for (j = config.totalExchanges; j < (config.totalExchanges * config.usersPerExchange) + config.totalExchanges; j++) {
+    // const maxRounds = config.totalExchanges;
+    // console.log(j+1)
+    while (!(currentExchange > config.totalExchanges)) {
+      // console.log(j+1)
+      // console.log(`Currently on exchange # ${currentExchange}`);
+      // console.log(`Total users on exchange so far: ${currentExchangeUsers}`)
+      // console.log(`Adding user #${j+1} to exchange ${currentExchange}`);
+      console.log(`CURRENT EXCHANGE: #${currentExchange}`)
+      console.log(`USERS IN THIS EXCHANGE #${currentExchange}: ${currentExchangeUsers}`)
+      var tempMagic = config.totalExchages + (currentExchange)
+      tempExName = sampleDB.get('exchangeKeys').find({ id: currentExchange }).value().name
+      tempPubKey = readDB.get('keys').find({ id: (config.usersPerExchange * currentExchange) + currentExchangeUsers }).value().address
+      tempPrivKey = readDB.get('keys').find({ id: (config.usersPerExchange * currentExchange) + currentExchangeUsers }).value().privKey
+      let exchangeName
+      try {
+        console.log(currentExchangeUsers)
+      } catch (error) {
+        console.log(error)
+      }
+      // Find exchange
+      // Exchange.findOne({ 'id': currentExchange }, function (err, exch) {
+      //   if (err) console.error(err)
+      //   console.log(exch)
+      //   exchangeName = exch.id
+      // })
+      // let userId = currentExchangeUsers + 1
+      // Save to DB
+      // let userInstance = new User({
+      //   id: userId,
+      //   exchange: exchangeName,
+      //   address: tempPubKey,
+      //   privKey: tempPrivKey
+      // })
+      //   userInstance.save((err, instance) => {
+      //   if (err) return console.error(err)
+      // }
+      // user accounts created <>
+      // sampleDB.get('exchanges').find({ name: tempExName }).get('users').push({ id: currentExchangeUsers + 1, address: tempPubKey, privKey: tempPrivKey, dollarsPerUser: config.dollarsPerUser, tokensPerUser: config.tokensPerUser }).write()
+      // console.log(`CURRENT LOOP USER: ${currentExchangeUsers}`)
+      currentExchangeUsers = currentExchangeUsers + 1
+      console.log(`ADDED, USERS: ${currentExchangeUsers}`)
+      // if(currentExchangeUsers + )
+      if (config.usersPerExchange === currentExchangeUsers) {
+        currentExchange = currentExchange + 1
+        currentExchangeUsers = 0
+      }
+    }
+    /*
+    while(config.totalExchanges> currentExchange){
+      //console.log(`exchange #${currentExchange}`)
+      currentExchangeCounter++
+      console.log(currentExchangeCounter)
+      console.log(currentExchange)
+      if(currentExchangeCounter>config.usersPerExchange){
+        currentExchange++
+      }
+
+      //currentExchange++
+    }
+    */
+  }
